@@ -1,7 +1,7 @@
 package model.commands;
 
-import photoalbum.Canvas;
-import shape.Shape;
+import model.photoalbum.Canvas;
+import model.shape.Shape;
 
 /**
  * The type Change height command.

@@ -1,6 +1,6 @@
 package model.commands;
 
-import photoalbum.PhotoAlbum;
+import model.photoalbum.PhotoAlbum;
 
 /**
  * The type View history command.

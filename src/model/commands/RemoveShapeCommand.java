@@ -1,6 +1,6 @@
 package model.commands;
 
-import photoalbum.Canvas;
+import model.photoalbum.Canvas;
 
 /**
  * The type Remove shape command.

@@ -5,34 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cs5004-hw9-2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeColorCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeHeightCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeNameCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeRadiusCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeRadiusXCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeRadiusYCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeWidthCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/MoveCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/RemoveShapeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/TakeShapshotCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ViewHistoryCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/exceptions/IllegalShapeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/photoalbum/Canvas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/photoalbum/PhotoAlbum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/shape/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/shape/ShapeBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/components/panels/Panel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/left-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/right-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/snapshots/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/buttons/Button.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/buttons/ImageButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/labels/Label.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeColorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ChangeColorCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeHeightCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ChangeHeightCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ChangeNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeRadiusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ChangeRadiusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeRadiusXCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ChangeRadiusXCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeRadiusYCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ChangeRadiusYCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeWidthCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ChangeWidthCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/MoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/RemoveShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/RemoveShapeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/TakeShapshotCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/TakeShapshotCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ViewHistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ViewHistoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +57,22 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/model/shape",
+    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/assets/snapshots" />
       <recent name="$PROJECT_DIR$/src/model/shape" />
       <recent name="$PROJECT_DIR$/src/model/photoalbum/snapshot" />
       <recent name="$PROJECT_DIR$/src/model/photoalbum" />
-      <recent name="$PROJECT_DIR$/src/model/exceptions" />
-      <recent name="$PROJECT_DIR$/src/model/commands" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681669249087</updated>
-      <workItem from="1681669250469" duration="2715000" />
+      <workItem from="1681669250469" duration="7563000" />
     </task>
     <servers />
   </component>

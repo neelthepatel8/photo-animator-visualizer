@@ -2,8 +2,8 @@ package model.commands;
 
 import java.awt.Color;
 
-import photoalbum.Canvas;
-import shape.Shape;
+import model.photoalbum.Canvas;
+import model.shape.Shape;
 
 /**
  * The type Change color command.

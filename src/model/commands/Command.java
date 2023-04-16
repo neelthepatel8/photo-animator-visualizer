@@ -1,6 +1,6 @@
 package model.commands;
 
-import exceptions.IllegalShapeException;
+import model.exceptions.IllegalShapeException;
 
 /**
  * The interface Command.
