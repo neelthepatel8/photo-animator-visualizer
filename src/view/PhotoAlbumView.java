@@ -2,8 +2,6 @@ package view;
 
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
@@ -12,15 +10,16 @@ import java.io.IOException;
 
 import javax.swing.*;
 
-import view.components.Image;
-import view.components.buttons.ImageButton;
+import controller.PhotoAlbumController;
 import view.components.labels.ImageLabel;
 import view.components.labels.Label;
 import view.components.labels.SnapshotLabel;
 import view.components.panels.Panel;
-import view.components.buttons.Button;
 
 public class PhotoAlbumView extends JFrame implements View, KeyListener {
+
+  /** Misc **/
+  private PhotoAlbumController controller;
 
   /** Panels **/
   private Panel mainPanel;
@@ -36,17 +35,15 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
   private Label descriptionLabel;
   private Label imageLabel;
 
-  /** Buttons **/
-  Button leftBtn;
-  Button rightBtn;
-  Button selectBtn;
-
   /** Fonts **/
   Font sansSerif;
   Font sansSerifSmall;
 
 
-  public PhotoAlbumView(int width, int height) throws IOException {
+  public PhotoAlbumView(int width, int height, PhotoAlbumController controller) throws IOException {
+
+    this.controller = controller;
+
     this.setTitle("Photo Album");
     this.setSize(new Dimension(width, height));
 
@@ -118,6 +115,7 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
     descriptionPanel.add(descriptionLabel, BorderLayout.CENTER);
 
     closeLabel = new ImageLabel("close-default", "close-hover");
+    closeLabel.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
     descriptionPanel.add(closeLabel, BorderLayout.WEST);
 
     imagePanel = new Panel();
@@ -148,11 +146,6 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
 
   private void setDescription(String description) {
     descriptionLabel.setText(description);
-  }
-
-  public static void main(String[] args) throws IOException {
-    PhotoAlbumView view = new PhotoAlbumView(700, 1000);
-    view.setVisible(true);
   }
 
   @Override
