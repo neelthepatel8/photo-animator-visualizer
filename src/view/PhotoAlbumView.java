@@ -4,6 +4,8 @@ package view;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
@@ -18,7 +20,7 @@ import view.components.labels.SnapshotLabel;
 import view.components.panels.Panel;
 import view.components.buttons.Button;
 
-public class PhotoAlbumView extends JFrame implements View {
+public class PhotoAlbumView extends JFrame implements View, KeyListener {
 
   /** Panels **/
   private Panel mainPanel;
@@ -48,6 +50,7 @@ public class PhotoAlbumView extends JFrame implements View {
     this.setTitle("Photo Album");
     this.setSize(new Dimension(width, height));
 
+    this.addKeyListener(this);
     this.setupInits();
     this.createLayout();
     this.setDefaults();
@@ -152,4 +155,30 @@ public class PhotoAlbumView extends JFrame implements View {
     view.setVisible(true);
   }
 
+  @Override
+  public void keyTyped(KeyEvent e) {
+
+  }
+
+  @Override
+  public void keyPressed(KeyEvent e) {
+    int keyCode = e.getKeyCode();
+    switch (keyCode) {
+      case KeyEvent.VK_LEFT:
+        this.setImage("pengu");
+        this.setDescription("This is the first Penguin");
+        break;
+      case KeyEvent.VK_RIGHT:
+        this.setImage("pengu2");
+        this.setDescription("This is the second Penguin");
+        break;
+      default:
+        break;
+    }
+  }
+
+  @Override
+  public void keyReleased(KeyEvent e) {
+
+  }
 }
