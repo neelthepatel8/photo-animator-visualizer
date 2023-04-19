@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -14,5 +15,9 @@ public interface View {
   void changeImage(String filename);
   void dispose();
   void setVisible(boolean visible);
-  void updatePicture(Snapshot snaps) throws IOException;
+  void updatePicture(Snapshot snap, int size) throws IOException;
+  void setImage(String path, boolean first);
+  void setDescription(String description);
+  void setId(String id);
+  void showSelectOptions(MouseEvent e);
 }

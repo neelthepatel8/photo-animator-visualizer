@@ -1,32 +1,38 @@
 package view.components.panels;
 
-import java.awt.Graphics;
-import java.awt.Dimension;
-import java.awt.Graphics2D;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
 
 import javax.imageio.ImageIO;
 
 import model.photoalbum.snapshot.Snapshot;
 import model.shape.Shape;
-import model.shape.SnapshotShape;
+import view.components.labels.ImageLabel;
 
 public class ImagePanel extends Panel {
 
   private Snapshot snap;
+  private ImageLabel label;
+  private int size;
 
   public ImagePanel() {
     this.setPreferredSize(new Dimension(600, 600));
+    this.setBackground(Color.WHITE);
     this.snap = null;
+    this.label = null;
+    this.size = 0;
   }
+
+
 
   public void setShapes(Snapshot snap) {
     this.snap = snap;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
   }
 
   @Override
@@ -35,9 +41,17 @@ public class ImagePanel extends Panel {
     Graphics2D g2d = (Graphics2D) g;
 
       for (Shape shape : snap.getShapes()) {
-        shape.draw(g2d);
+        shape.draw(g2d, size,600);
       }
 
+  }
+
+  public void setImage(String pathname) {
+    if (this.label == null)  {
+      this.label = new ImageLabel(pathname);
+      this.add(this.label);
+    }
+    this.label.setImage(pathname);
   }
 
 

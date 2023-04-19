@@ -5,30 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/inputfiles/demo_input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/CommandReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeCircleSizeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeOvalSizeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeRectangleSizeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/commands/CommandFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/photoalbum/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/shape/DrawerFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/shape/SnapshotShape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/components/image/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/components/panels/ImagePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/inputfiles/buildings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/WebView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/pengu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/pengu2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/snapshots/snap-0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/snapshots/snap-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/snapshots/snap-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-3.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/commands/TakeShapshotCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/TakeShapshotCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/commands/ViewHistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ViewHistoryCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/PhotoAlbum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/PhotoAlbumModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/shape/DrawerFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shape/DrawerFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/shape/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shape/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/components/Image.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/components/buttons/ImageButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/buttons/ImageButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/components/panels/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/panels/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/labels/ImageLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/labels/ImageLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/panels/ImagePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/panels/ImagePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -91,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681669249087</updated>
       <workItem from="1681669250469" duration="15928000" />
-      <workItem from="1681833717205" duration="20084000" />
+      <workItem from="1681833717205" duration="26707000" />
     </task>
     <servers />
   </component>

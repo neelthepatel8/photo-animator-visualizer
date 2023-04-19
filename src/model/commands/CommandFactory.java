@@ -23,7 +23,7 @@ public class CommandFactory {
       case "shape":
         String shapeName = commandParts[1];
         String shapeType = commandParts[2];
-        String properties = commandString.replace(commandType, "").replace(" " + shapeType + " ", "").trim();
+        String properties = commandString.replace(commandType, "").replace(" " + shapeType + " ", " ").trim();
         return new CreateShapeCommand(canvas, shapeType, properties);
       case "move":
         shapeName = commandParts[1];

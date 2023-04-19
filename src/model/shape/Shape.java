@@ -48,16 +48,23 @@ public class Shape implements DrawerFunction{
     return x;
   }
 
-  public void draw(Graphics g) {
+  public void draw(Graphics g, int forCanvas, int toCanvas) {
     g.setColor(color);
+    int newX = (int) ((x / forCanvas) * toCanvas);
+    int newY = (int) ((y / forCanvas) * toCanvas);
+    int newWidth = (int) ((width / forCanvas) * toCanvas);
+    int newHeight = (int) ((height / forCanvas) * toCanvas);
+    int newRadiusX = (int) ((radiusX / forCanvas) * toCanvas);
+    int newRadiusY = (int) ((radiusY / forCanvas) * toCanvas);
+    int newRadius = (int) ((radius / forCanvas) * toCanvas);
 
     switch(type.toLowerCase()) {
       case "rectangle":
-        g.fillRect((int) x, (int) y, (int) width, (int) height);
+        g.fillRect(newX, newY, newWidth, newHeight);
       case "oval":
-          g.fillOval((int) x, (int) y, (int) radiusX, (int) radiusY);
+          g.fillOval(newX, newY, newRadiusX, newRadiusY);
       case "circle":
-          g.fillOval((int) x, (int) y, (int) radius, (int) radius);
+          g.fillOval(newX, newY, newRadius, newRadius);
     }
   }
 

@@ -26,6 +26,8 @@ public class CreateShapeCommand implements Command {
 
   @Override
   public void execute() throws IllegalShapeException, NoSuchFieldException, IllegalAccessException {
+    System.out.println(shapeType);
+    System.out.println(shapeProperties);
     canvas.create(shapeType, shapeProperties);
   }
 }

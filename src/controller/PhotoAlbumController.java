@@ -1,5 +1,6 @@
 package controller;
 
+import java.awt.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,20 +26,27 @@ public class PhotoAlbumController {
 
   public void start() throws IOException, IllegalShapeException, NoSuchFieldException, IllegalAccessException {
 
-    CommandReader reader = new CommandReader("src/assets/inputfiles/demo_input.txt");
+    CommandReader reader = new CommandReader("src/assets/inputfiles/buildings.txt");
     ArrayList<String> commands = reader.read();
 
+    int size = 800;
+    String setupCommand = commands.get(0);
+    if (setupCommand.startsWith("#") && setupCommand.contains("canvas")) {
+      size = Integer.parseInt(setupCommand.split("\\s+")[4]);
+    }
     for (String command : commands) {
-
       this.model.execute(CommandFactory.createCommand(command, this.model));
       if (command.split("\\s+")[0].equalsIgnoreCase("snapshot")) {
-        System.out.println(command);
-        this.view.updatePicture(this.model.getLastSnapshot());
+        this.view.updatePicture(this.model.getLastSnapshot(), size);
       }
     }
 
+    this.view.setImage("snap-0", true);
+
     this.view.setVisible(true);
   }
+
+
 
   public static void main(String[] args) throws IOException, IllegalShapeException, NoSuchFieldException, IllegalAccessException {
     PhotoAlbumController controller = new PhotoAlbumController();

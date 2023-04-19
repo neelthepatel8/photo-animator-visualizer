@@ -2,14 +2,18 @@ package view;
 
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Objects;
 
 import javax.swing.*;
 
@@ -28,6 +32,9 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
   /** Misc **/
   private PhotoAlbumController controller;
   private int snapCount = 0;
+  private int currentSnap = 0;
+
+  private ArrayList<Snapshot> snapshots;
 
   /** Panels **/
   private Panel mainPanel;
@@ -42,6 +49,7 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
   private Label rightLabel;
   private Label selectLabel;
   private Label descriptionLabel;
+  private Label idLabel;
   private Label imageLabel;
 
   /** Fonts **/
@@ -52,6 +60,7 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
   public PhotoAlbumView(int width, int height, PhotoAlbumController controller) throws IOException {
 
     this.controller = controller;
+    this.snapshots = new ArrayList<>();
 
     this.setTitle("Photo Album");
     this.setSize(new Dimension(width, height));
@@ -68,7 +77,7 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
 
   private void setupInits() {
     this.sansSerif  = new Font(Font.MONOSPACED, Font.BOLD,  32);
-    this.sansSerifSmall  = new Font(Font.MONOSPACED, Font.BOLD,  24);
+    this.sansSerifSmall  = new Font(Font.MONOSPACED, Font.PLAIN,  18);
   }
 
   private void setupEventHandlers() {
@@ -83,38 +92,80 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
     leftLabel.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        view.setImage("pengu");
-        view.setDescription("This is the first Penguin");
+        if (currentSnap - 1 < 0) {
+          JOptionPane.showMessageDialog(null, "Out of Snaps!", "Error", JOptionPane.ERROR_MESSAGE);
+          return;
+        }
+        currentSnap -= 1;
+        view.changeImage("snap-" + currentSnap);
+        view.setDescription(snapshots.get(currentSnap).getDescription());
+        view.setId(snapshots.get(currentSnap).getId());
       }
     });
     rightLabel.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        view.setImage("pengu2");
-        view.setDescription("This is the second Penguin");
+        if (currentSnap + 1 >= snapCount) {
+          JOptionPane.showMessageDialog(null, "Out of Snaps!", "Error", JOptionPane.ERROR_MESSAGE);
+          return;
+        }
+        currentSnap += 1;
+        view.changeImage("snap-" + currentSnap);
+        view.setDescription(snapshots.get(currentSnap).getDescription());
+        view.setId(snapshots.get(currentSnap).getId());
       }
     });
     selectLabel.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        System.out.println("Pressed: " + e.getSource().getClass());
+        view.showSelectOptions(e);
       }
     });
 
   }
 
   public void changeImage(String filename) {
-    this.setImage(filename);
+    this.setImage(filename, false);
   }
 
   @Override
-  public void updatePicture(Snapshot snap) throws IOException {
+  public void updatePicture(Snapshot snap, int size) throws IOException {
+    snapshots.add(snap);
     this.imagePanel.setShapes(snap);
+    this.imagePanel.setSize(size);
     this.imagePanel.saveImage(snapCount);
     snapCount += 1;
   }
 
+  public void showSelectOptions(MouseEvent e) {
+    JPopupMenu menu = new JPopupMenu();
+    View view = this;
+    for (Snapshot snapshot: snapshots) {
+      JMenuItem item = new JMenuItem();
+      item.setText(snapshot.getId());
+      menu.add(item);
+      item.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+          Snapshot snap = getSnapshotFromID(item.getText());
+          view.changeImage("snap-" + snapshots.indexOf(snap));
+          view.setDescription(snap.getDescription());
+          view.setId(snap.getId());
+          currentSnap = snapshots.indexOf(snap);
+        }
+      });
+    }
+    menu.show(e.getComponent(), 0, e.getY());
+  }
 
+  private Snapshot getSnapshotFromID(String id) {
+    for (Snapshot snapshot: snapshots) {
+      if (Objects.equals(snapshot.getId(), id)) {
+        return snapshot;
+      }
+    }
+    return snapshots.get(0);
+  }
   private void setDefaults() {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
@@ -129,11 +180,17 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
     descriptionLabel = new Label("This is the first Penguin");
     descriptionLabel.setFont(sansSerif);
 
-    descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0, 30, 0, 0));
+    descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0, 230, 0, 0));
     descriptionPanel.add(descriptionLabel, BorderLayout.CENTER);
 
+    idLabel = new Label("");
+    idLabel.setBorder(BorderFactory.createEmptyBorder(0, 350, 2, 0));
+    idLabel.setFont(sansSerifSmall);
+    descriptionPanel.add(idLabel, BorderLayout.SOUTH);
+
+
     closeLabel = new ImageLabel("close-default", "close-hover");
-    closeLabel.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
+    closeLabel.setBorder(BorderFactory.createEmptyBorder(3, 10, 5, 10));
     descriptionPanel.add(closeLabel, BorderLayout.WEST);
 
     imageContainerPanel = new Panel();
@@ -157,11 +214,24 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
 
   }
 
-  private void setImage(String fileName) {
-    imageLabel.setIcon(new ImageIcon("src/assets/snapshots/" + fileName + ".jpg"));
+  public void setImage(String fileName, boolean first) {
+    if (first) {
+      imageContainerPanel.remove(imagePanel);
+      imageLabel = new ImageLabel(fileName);
+      imageContainerPanel.add(imageLabel);
+      this.setDescription(snapshots.get(0).getDescription());
+      this.setId(snapshots.get(0).getId());
+      currentSnap = 0;
+    }
+    else
+      imageLabel.setImage(fileName);
   }
 
-  private void setDescription(String description) {
+  public void setId(String id) {
+    idLabel.setText(id);
+  }
+
+  public void setDescription(String description) {
     descriptionLabel.setText(description);
   }
 
@@ -173,18 +243,18 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
   @Override
   public void keyPressed(KeyEvent e) {
     int keyCode = e.getKeyCode();
-    switch (keyCode) {
-      case KeyEvent.VK_LEFT:
-        this.setImage("pengu");
-        this.setDescription("This is the first Penguin");
-        break;
-      case KeyEvent.VK_RIGHT:
-        this.setImage("pengu2");
-        this.setDescription("This is the second Penguin");
-        break;
-      default:
-        break;
-    }
+//    switch (keyCode) {
+//      case KeyEvent.VK_LEFT:
+//        this.setImage("pengu");
+//        this.setDescription("This is the first Penguin");
+//        break;
+//      case KeyEvent.VK_RIGHT:
+//        this.setImage("pengu2");
+//        this.setDescription("This is the second Penguin");
+//        break;
+//      default:
+//        break;
+//    }
   }
 
   @Override

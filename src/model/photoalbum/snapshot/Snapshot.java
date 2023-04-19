@@ -42,6 +42,14 @@ public class Snapshot {
     this.canvas = canvas;
   }
 
+  public String getId() {
+    return id;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
   @Override
   public String toString() {
 
