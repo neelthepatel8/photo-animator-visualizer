@@ -2,12 +2,14 @@ package model.photoalbum;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import model.commands.Command;
 import model.exceptions.IllegalShapeException;
 import model.shape.Shape;
 import model.shape.ShapeBuilder;
+import model.shape.SnapshotShape;
 
 /**
  * The type Canvas.
@@ -15,12 +17,14 @@ import model.shape.ShapeBuilder;
 public class Canvas {
 
   private static List<Shape> shapes = null;
+  private int snapshots;
 
   /**
    * Instantiates a new Canvas.
    */
   public Canvas() {
     shapes = new ArrayList<>();
+    snapshots = 0;
   }
 
   /**
@@ -35,6 +39,12 @@ public class Canvas {
     command.execute();
   }
 
+  public void addSnapShotShape() {
+    shapes.add(new SnapshotShape(snapshots));
+    snapshots += 1;
+    System.out.println(shapes);
+  }
+
   /**
    * Shape create that uses the shape builder based on the
    * shape type sets the required values.
@@ -47,31 +57,35 @@ public class Canvas {
    */
   public void create(String shapeType, String shapeProperties) throws IllegalShapeException, NoSuchFieldException, IllegalAccessException {
     ShapeBuilder shapeBuilder = ShapeBuilder.getInstance();
-    String[] properties = shapeProperties.split(" ");
+    String[] properties = shapeProperties.trim().split("\\s+");
 
     // Set common properties:
     shapeBuilder
             .start()
+            .setType(shapeType)
             .setName(properties[0])
             .setX(Double.parseDouble(properties[1]))
             .setY(Double.parseDouble(properties[2]))
-            .setColor((Color) Color.class.getField(properties[3]).get(null));
+            .setColor(new Color(
+                    Integer.parseInt(properties[5]),
+                    Integer.parseInt(properties[6]),
+                    Integer.parseInt(properties[7])));
 
     // Set shape specific properties:
     switch (shapeType.toLowerCase()) {
       case "rectangle":
         shapeBuilder
-                .setWidth(Double.parseDouble(properties[4]))
-                .setHeight(Double.parseDouble(properties[5]));
+                .setWidth(Double.parseDouble(properties[3]))
+                .setHeight(Double.parseDouble(properties[4]));
         break;
       case "oval":
         shapeBuilder
-                .setRadiusX(Double.parseDouble(properties[4]))
-                .setRadiusY(Double.parseDouble(properties[5]));
+                .setRadiusX(Double.parseDouble(properties[3]))
+                .setRadiusY(Double.parseDouble(properties[4]));
         break;
       case "circle":
         shapeBuilder
-                .setRadius(Double.parseDouble(properties[4]));
+                .setRadius(Double.parseDouble(properties[3]));
         break;
 
       default:
@@ -109,7 +123,8 @@ public class Canvas {
    */
   public static Shape findShape(String shapeName) {
     for (Shape shape : shapes) {
-      if (shape.getName().equalsIgnoreCase(shapeName)) {
+
+      if (shape.getName().equals(shapeName)) {
         return shape;
       }
     }

@@ -7,25 +7,34 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 import javax.swing.*;
 
 import controller.PhotoAlbumController;
+import model.photoalbum.snapshot.Snapshot;
+import model.shape.Shape;
+import model.shape.SnapshotShape;
 import view.components.labels.ImageLabel;
 import view.components.labels.Label;
 import view.components.labels.SnapshotLabel;
+import view.components.panels.ImagePanel;
 import view.components.panels.Panel;
 
 public class PhotoAlbumView extends JFrame implements View, KeyListener {
 
   /** Misc **/
   private PhotoAlbumController controller;
+  private int snapCount = 0;
 
   /** Panels **/
   private Panel mainPanel;
   private Panel descriptionPanel;
-  private Panel imagePanel;
+  private ImagePanel imagePanel;
   private Panel buttonPanel;
+  private Panel imageContainerPanel;
 
   /** Labels **/
   private Label closeLabel;
@@ -52,6 +61,7 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
     this.createLayout();
     this.setDefaults();
     this.setupEventHandlers();
+
     this.setContentPane(mainPanel);
 
   }
@@ -97,6 +107,14 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
     this.setImage(filename);
   }
 
+  @Override
+  public void updatePicture(Snapshot snap) throws IOException {
+    this.imagePanel.setShapes(snap);
+    this.imagePanel.saveImage(snapCount);
+    snapCount += 1;
+  }
+
+
   private void setDefaults() {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
@@ -118,11 +136,10 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
     closeLabel.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
     descriptionPanel.add(closeLabel, BorderLayout.WEST);
 
-    imagePanel = new Panel();
-    imagePanel.setLayout(new FlowLayout());
-
-    imageLabel = new SnapshotLabel("pengu");
-    imagePanel.add(imageLabel);
+    imageContainerPanel = new Panel();
+    imageContainerPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+    imagePanel = new ImagePanel();
+    imageContainerPanel.add(imagePanel);
 
     buttonPanel = new Panel(new FlowLayout(FlowLayout.CENTER, 50, 0));
     leftLabel = new ImageLabel("left-arrow", "left-arrow-hover");
@@ -135,7 +152,7 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
     buttonPanel.setOpaque(false);
     mainPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
     mainPanel.add(descriptionPanel);
-    mainPanel.add(imagePanel);
+    mainPanel.add(imageContainerPanel);
     mainPanel.add(buttonPanel);
 
   }

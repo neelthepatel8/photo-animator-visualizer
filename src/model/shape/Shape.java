@@ -1,12 +1,13 @@
 package model.shape;
 
-import java.awt.Color;
+import java.awt.*;
 import java.util.Arrays;
+import java.util.function.Function;
 
 /**
  * Shape class has properties of a shape and methods.
  */
-public class Shape {
+public class Shape implements DrawerFunction{
 
   private double x;
   private double y;
@@ -18,6 +19,7 @@ public class Shape {
   private double radiusX;
   private double radiusY;
   private double radius;
+  private Function<Graphics, Void> drawFunction;
 
   /**
    * Instantiates a new Shape.
@@ -33,6 +35,8 @@ public class Shape {
     this.radiusX = 0;
     this.radiusY = 0;
     this.radius = 0;
+    this.drawFunction = null;
+
   }
 
   /**
@@ -42,6 +46,19 @@ public class Shape {
    */
   public double getX() {
     return x;
+  }
+
+  public void draw(Graphics g) {
+    g.setColor(color);
+
+    switch(type.toLowerCase()) {
+      case "rectangle":
+        g.fillRect((int) x, (int) y, (int) width, (int) height);
+      case "oval":
+          g.fillOval((int) x, (int) y, (int) radiusX, (int) radiusY);
+      case "circle":
+          g.fillOval((int) x, (int) y, (int) radius, (int) radius);
+    }
   }
 
   /**
@@ -168,6 +185,8 @@ public class Shape {
    */
   public void setType(String type) {
     this.type = type;
+
+
   }
 
   /**
@@ -229,7 +248,7 @@ public class Shape {
     if (!name.isBlank())
       sb.append("Name: ").append(name);
     if (!type.isBlank())
-      sb.append("Type: ").append(type);
+      sb.append(" Type: ").append(type);
     if (x != 0)
       sb.append("\n| X: ").append(x);
     if (y != 0)

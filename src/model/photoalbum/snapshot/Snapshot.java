@@ -1,8 +1,10 @@
 package model.photoalbum.snapshot;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import model.photoalbum.Canvas;
+import model.shape.Shape;
 
 /**
  * The type Snapshot.
@@ -13,6 +15,7 @@ public class Snapshot {
   private String id;
   private String description;
   private Canvas canvas;
+  private List<Shape> shapes;
 
   /**
    * Instantiates a new Snapshot.
@@ -20,9 +23,10 @@ public class Snapshot {
    * @param description the description
    * @param canvas      the canvas
    */
-  public Snapshot(String description, Canvas canvas) {
+  public Snapshot(String description, Canvas canvas, List<Shape> shapes) {
     this.description = description;
     this.canvas = canvas;
+    this.shapes = shapes;
   }
 
   /**
@@ -45,5 +49,9 @@ public class Snapshot {
             "Timestamp: " + timestamp + "\n" +
             "Description: " + description + "\n" +
             canvas.toString();
+  }
+
+  public List<Shape> getShapes() {
+    return shapes;
   }
 }

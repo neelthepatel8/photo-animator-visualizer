@@ -2,8 +2,8 @@ package view.components.buttons;
 
 import java.awt.*;
 import java.io.IOException;
+import view.components.image.Image;
 
-import view.components.Image;
 
 public class ImageButton extends Button {
 

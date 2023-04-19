@@ -5,10 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/inputfiles/demo_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/CommandReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeCircleSizeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeOvalSizeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/commands/ChangeRectangleSizeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/commands/CommandFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/photoalbum/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/shape/DrawerFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/shape/SnapshotShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/image/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/panels/ImagePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/TakeShapshotCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/TakeShapshotCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ViewHistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ViewHistoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/PhotoAlbum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/PhotoAlbumModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/shape/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shape/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/Image.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/buttons/ImageButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/buttons/ImageButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/panels/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/panels/Panel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -39,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/assets/snapshots",
+    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/assets/inputfiles",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,11 +72,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/inputfiles" />
       <recent name="$PROJECT_DIR$/src/assets/snapshots" />
       <recent name="$PROJECT_DIR$/src/assets/backgrounds" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/model/shape" />
-      <recent name="$PROJECT_DIR$/src/model/photoalbum/snapshot" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model.commands" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -66,7 +90,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681669249087</updated>
-      <workItem from="1681669250469" duration="15902000" />
+      <workItem from="1681669250469" duration="15928000" />
+      <workItem from="1681833717205" duration="20084000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,8 @@
 package model.photoalbum;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import model.commands.Command;
 import model.exceptions.IllegalShapeException;
@@ -9,17 +11,17 @@ import model.photoalbum.snapshot.Snapshot;
 /**
  * The type Photo album.
  */
-public class PhotoAlbum {
+public class PhotoAlbumModel implements Model{
 
   private final Canvas canvas;
-  private final HashMap<Snapshot, String> snapshots;
+  private final LinkedHashMap<Snapshot, String> snapshots;
 
   /**
    * Instantiates a new Photo album.
    */
-  public PhotoAlbum() {
+  public PhotoAlbumModel() {
     this.canvas = new Canvas();
-    this.snapshots = new HashMap<Snapshot, String>();
+    this.snapshots = new LinkedHashMap<Snapshot, String>();
   }
 
   /**
@@ -40,7 +42,7 @@ public class PhotoAlbum {
    * @param description the description
    */
   public void snap(String description) {
-    Snapshot snapshot = new Snapshot(description, canvas);
+    Snapshot snapshot = new Snapshot(description, canvas, canvas.getShapes());
     snapshot.snap(canvas, description);
     snapshots.put(snapshot, snapshot.toString());
   }
@@ -68,7 +70,17 @@ public class PhotoAlbum {
    *
    * @return the snapshots
    */
-  public HashMap<Snapshot, String> getSnapshots() {
+  public LinkedHashMap<Snapshot, String> getSnapshots() {
     return snapshots;
+  }
+
+  public Snapshot getLastSnapshot() {
+    Map.Entry<Snapshot, String> lastSnap = snapshots
+            .entrySet()
+            .stream()
+            .reduce((first, second) -> second)
+            .orElse(null);
+
+    return lastSnap.getKey();
   }
 }
