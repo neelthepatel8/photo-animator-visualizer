@@ -4,8 +4,6 @@ package view;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
@@ -14,19 +12,17 @@ import java.util.Objects;
 
 import javax.swing.*;
 
-import controller.PhotoAlbumController;
+import controller.IController;
 import model.photoalbum.snapshot.Snapshot;
 import view.components.labels.ImageLabel;
 import view.components.labels.Label;
 import view.components.panels.ImagePanel;
 import view.components.panels.Panel;
 
-public class PhotoAlbumView extends JFrame implements IView, KeyListener {
+public class GraphicalView extends JFrame implements IView {
 
   /** Misc **/
-  private PhotoAlbumController controller;
-  private int snapCount = 0;
-  private int currentSnap = 0;
+  private IController controller;
 
   private ArrayList<Snapshot> snapshots;
 
@@ -51,7 +47,7 @@ public class PhotoAlbumView extends JFrame implements IView, KeyListener {
   Font sansSerifSmall;
 
 
-  public PhotoAlbumView(int width, int height, PhotoAlbumController controller) throws IOException {
+  public GraphicalView(int width, int height, IController controller) throws IOException {
 
     this.controller = controller;
     this.snapshots = new ArrayList<>();
@@ -59,7 +55,6 @@ public class PhotoAlbumView extends JFrame implements IView, KeyListener {
     this.setTitle("Photo Album");
     this.setSize(new Dimension(width, height));
 
-    this.addKeyListener(this);
     this.setupInits();
     this.createLayout();
     this.setDefaults();
@@ -76,50 +71,43 @@ public class PhotoAlbumView extends JFrame implements IView, KeyListener {
 
   private void setupEventHandlers() {
 
-    PhotoAlbumView view = this;
     closeLabel.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        view.dispose();
+        controller.handleClose(e);
       }
     });
     leftLabel.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        if (currentSnap - 1 < 0) {
+        if (!controller.handlePrevious(e)) {
           JOptionPane.showMessageDialog(null, "Out of Snaps!", "Error", JOptionPane.ERROR_MESSAGE);
-          return;
         }
-        currentSnap -= 1;
-        view.changeImage("snap-" + currentSnap);
-        view.setDescription(snapshots.get(currentSnap).getDescription());
-        view.setId(snapshots.get(currentSnap).getId());
       }
     });
+
     rightLabel.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        if (currentSnap + 1 >= snapCount) {
+        if (!controller.handleNext(e)) {
           JOptionPane.showMessageDialog(null, "Out of Snaps!", "Error", JOptionPane.ERROR_MESSAGE);
-          return;
         }
-        currentSnap += 1;
-        view.changeImage("snap-" + currentSnap);
-        view.setDescription(snapshots.get(currentSnap).getDescription());
-        view.setId(snapshots.get(currentSnap).getId());
       }
     });
+
     selectLabel.addMouseListener(new MouseAdapter() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        view.showSelectOptions(e);
+        controller.handleSelect(e);
       }
     });
 
   }
 
-  public void changeImage(String filename) {
-    this.setImage(filename, false);
+  public void switchToNew(String imageName, String description, String id) {
+    this.setImage(imageName, false);
+    this.setDescription(description);
+    this.setId(id);
   }
 
   @Override
@@ -131,41 +119,16 @@ public class PhotoAlbumView extends JFrame implements IView, KeyListener {
     snapCount += 1;
   }
 
-  public void showSelectOptions(MouseEvent e) {
-    JPopupMenu menu = new JPopupMenu();
-    IView IView = this;
-    for (Snapshot snapshot: snapshots) {
-      JMenuItem item = new JMenuItem();
-      item.setText(snapshot.getId());
-      menu.add(item);
-      item.addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-          Snapshot snap = getSnapshotFromID(item.getText());
-          IView.changeImage("snap-" + snapshots.indexOf(snap));
-          IView.setDescription(snap.getDescription());
-          IView.setId(snap.getId());
-          currentSnap = snapshots.indexOf(snap);
-        }
-      });
-    }
-    menu.show(e.getComponent(), 0, e.getY());
+  public void close() {
+    this.dispose();
   }
 
-  private Snapshot getSnapshotFromID(String id) {
-    for (Snapshot snapshot: snapshots) {
-      if (Objects.equals(snapshot.getId(), id)) {
-        return snapshot;
-      }
-    }
-    return snapshots.get(0);
-  }
   private void setDefaults() {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
   }
 
-  private void createLayout() throws IOException {
+  private void createLayout() {
     mainPanel = new Panel();
     mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
@@ -206,56 +169,28 @@ public class PhotoAlbumView extends JFrame implements IView, KeyListener {
     mainPanel.add(imageContainerPanel);
     mainPanel.add(buttonPanel);
 
+    this.setInitials();
+
+
   }
 
   public void setImage(String fileName, boolean first) {
     if (first) {
-      imageContainerPanel.remove(imagePanel);
-      imageLabel = new ImageLabel(fileName);
-      imageContainerPanel.add(imageLabel);
-      this.setDescription(snapshots.get(0).getDescription());
-      this.setId(snapshots.get(0).getId());
-      currentSnap = 0;
+      //TODO
     }
     else
       imageLabel.setImage(fileName);
   }
-
   public void setId(String id) {
     idLabel.setText(id);
-  }
-
-  public void setInitials() {
-    this.setImage("snap-0", true);
   }
   public void setDescription(String description) {
     descriptionLabel.setText(description);
   }
 
-  @Override
-  public void keyTyped(KeyEvent e) {
-
+  private void setInitials() {
+    this.setImage("snap-0", true);
   }
 
-  @Override
-  public void keyPressed(KeyEvent e) {
-    int keyCode = e.getKeyCode();
-//    switch (keyCode) {
-//      case KeyEvent.VK_LEFT:
-//        this.setImage("pengu");
-//        this.setDescription("This is the first Penguin");
-//        break;
-//      case KeyEvent.VK_RIGHT:
-//        this.setImage("pengu2");
-//        this.setDescription("This is the second Penguin");
-//        break;
-//      default:
-//        break;
-//    }
-  }
 
-  @Override
-  public void keyReleased(KeyEvent e) {
-
-  }
 }

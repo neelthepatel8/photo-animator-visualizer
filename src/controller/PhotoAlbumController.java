@@ -10,7 +10,7 @@ import model.exceptions.IllegalShapeException;
 import model.photoalbum.model.IModel;
 import model.photoalbum.model.PhotoAlbumModel;
 import view.IView;
-import view.PhotoAlbumView;
+import view.GraphicalView;
 
 
 public class PhotoAlbumController implements IController{
@@ -19,7 +19,7 @@ public class PhotoAlbumController implements IController{
   private final IModel model;
 
   public PhotoAlbumController() throws IOException {
-    this.view = new PhotoAlbumView(1000, 1000, this);
+    this.view = new GraphicalView(1000, 1000, this);
     this.model = new PhotoAlbumModel();
   }
 
