@@ -3,10 +3,10 @@ package model.photoalbum.snapshot;
 import java.util.List;
 
 import model.photoalbum.canvas.ICanvas;
-import model.shape.Shape;
+import model.shape.IShape;
 
 public interface ISnapshot {
-  List<Shape> getShapes();
+  List<IShape> getShapes();
   void snap(ICanvas canvas, String description);
   String getId();
   String getDescription();

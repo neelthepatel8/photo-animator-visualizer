@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-0.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/shape/SnapshotShape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/canvas/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/canvas/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/canvas/ICanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/canvas/ICanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/snapshot/ISnapshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/snapshot/ISnapshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GraphicalView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GraphicalView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/IView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GraphicalView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/panels/ImagePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/panels/ImagePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +78,7 @@
       <updated>1681669249087</updated>
       <workItem from="1681669250469" duration="15928000" />
       <workItem from="1681833717205" duration="26753000" />
-      <workItem from="1681921161434" duration="4422000" />
+      <workItem from="1681921161434" duration="5560000" />
     </task>
     <servers />
   </component>

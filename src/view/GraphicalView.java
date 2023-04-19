@@ -2,18 +2,16 @@ package view;
 
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Objects;
+import java.util.List;
 
 import javax.swing.*;
 
 import controller.IController;
 import model.photoalbum.snapshot.Snapshot;
+import model.shape.IShape;
 import view.components.labels.ImageLabel;
 import view.components.labels.Label;
 import view.components.panels.ImagePanel;
@@ -24,7 +22,6 @@ public class GraphicalView extends JFrame implements IView {
   /** Misc **/
   private IController controller;
 
-  private ArrayList<Snapshot> snapshots;
 
   /** Panels **/
   private Panel mainPanel;
@@ -50,17 +47,19 @@ public class GraphicalView extends JFrame implements IView {
   public GraphicalView(int width, int height, IController controller) throws IOException {
 
     this.controller = controller;
-    this.snapshots = new ArrayList<>();
 
     this.setTitle("Photo Album");
     this.setSize(new Dimension(width, height));
 
-    this.setupInits();
     this.createLayout();
+    this.setupInits();
     this.setDefaults();
     this.setupEventHandlers();
 
     this.setContentPane(mainPanel);
+    this.pack();
+    this.validate();
+    this.setVisible(true);
 
   }
 
@@ -104,25 +103,6 @@ public class GraphicalView extends JFrame implements IView {
 
   }
 
-  public void switchToNew(String imageName, String description, String id) {
-    this.setImage(imageName, false);
-    this.setDescription(description);
-    this.setId(id);
-  }
-
-  @Override
-  public void updatePicture(Snapshot snap, int size) throws IOException {
-    snapshots.add(snap);
-    this.imagePanel.setShapes(snap);
-    this.imagePanel.setSize(size);
-    this.imagePanel.saveImage(snapCount);
-    snapCount += 1;
-  }
-
-  public void close() {
-    this.dispose();
-  }
-
   private void setDefaults() {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
@@ -134,7 +114,7 @@ public class GraphicalView extends JFrame implements IView {
 
 
     descriptionPanel = new Panel(new BorderLayout());
-    descriptionLabel = new Label("This is the first Penguin");
+    descriptionLabel = new Label("");
     descriptionLabel.setFont(sansSerif);
 
     descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0, 230, 0, 0));
@@ -169,27 +149,34 @@ public class GraphicalView extends JFrame implements IView {
     mainPanel.add(imageContainerPanel);
     mainPanel.add(buttonPanel);
 
-    this.setInitials();
-
-
+//    this.setInitials();
   }
 
-  public void setImage(String fileName, boolean first) {
-    if (first) {
-      //TODO
-    }
-    else
-      imageLabel.setImage(fileName);
+  public void switchToNew(String imageName, String description, String id) {
+    this.setImage(imageName);
+    this.setDescription(description);
+    this.setId(id);
+  }
+
+  @Override
+  public void savePicture(List<IShape> shapes, int size) throws IOException {
+    this.imagePanel.setShapes(shapes);
+    this.imagePanel.setSize(size);
+    this.imagePanel.saveImage(0);
+  }
+
+  public void close() {
+    this.dispose();
+  }
+
+  public void setImage(String fileName) {
+    imageLabel.setImage(fileName);
   }
   public void setId(String id) {
     idLabel.setText(id);
   }
   public void setDescription(String description) {
     descriptionLabel.setText(description);
-  }
-
-  private void setInitials() {
-    this.setImage("snap-0", true);
   }
 
 

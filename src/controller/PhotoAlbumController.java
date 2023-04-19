@@ -1,5 +1,6 @@
 package controller;
 
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.util.List;
 
@@ -45,7 +46,7 @@ public class PhotoAlbumController implements IController{
 
       // Update picture everytime there is a snapshot.
       if (command.split("\\s+")[0].equalsIgnoreCase("snapshot")) {
-        this.view.updatePicture(this.model.getLastSnapshot(), size);
+        this.view.savePicture(this.model.getLastSnapshot().getShapes(), size);
       }
     }
   }
@@ -61,9 +62,26 @@ public class PhotoAlbumController implements IController{
     // Execute the commands from the file.
     this.runCommands(commands, size);
 
-    // Set the first image and description.
-    this.view.setInitials();
+  }
 
+  @Override
+  public boolean handleNext(MouseEvent e) {
+    return false;
+  }
+
+  @Override
+  public boolean handlePrevious(MouseEvent e) {
+    return false;
+  }
+
+  @Override
+  public void handleSelect(MouseEvent e) {
+
+  }
+
+  @Override
+  public void handleClose(MouseEvent e) {
+    this.view.close();
   }
 
   public static void main(String[] args) throws IOException, IllegalShapeException, NoSuchFieldException, IllegalAccessException {

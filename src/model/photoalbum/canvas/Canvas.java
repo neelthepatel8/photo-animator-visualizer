@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.exceptions.IllegalShapeException;
-import model.shape.Shape;
+import model.shape.IShape;
 import model.shape.ShapeBuilder;
 
 /**
@@ -13,7 +13,7 @@ import model.shape.ShapeBuilder;
  */
 public class Canvas implements ICanvas {
 
-  private static List<Shape> shapes = null;
+  private static List<IShape> shapes = null;
 
   /**
    * Instantiates a new Canvas.
@@ -86,7 +86,7 @@ public class Canvas implements ICanvas {
    *
    * @return the shapes
    */
-  public List<Shape> getShapes() {
+  public List<IShape> getShapes() {
     return shapes;
   }
 
@@ -96,8 +96,8 @@ public class Canvas implements ICanvas {
    * @param shapeName the shape name
    * @return the shape
    */
-  public static Shape findShape(String shapeName) {
-    for (Shape shape : shapes) {
+  public static IShape findShape(String shapeName) {
+    for (IShape shape : shapes) {
 
       if (shape.getName().equals(shapeName)) {
         return shape;
@@ -110,7 +110,7 @@ public class Canvas implements ICanvas {
   public String toString() {
     StringBuilder result = new StringBuilder();
     result.append("Shape Information: \n");
-    for (Shape shape : shapes) {
+    for (IShape shape : shapes) {
       result.append(shape.toString());
       result.append("\n\n");
     }

@@ -6,29 +6,30 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import java.util.List;
 
-import model.photoalbum.snapshot.Snapshot;
+import model.shape.IShape;
 import model.shape.Shape;
 import view.components.labels.ImageLabel;
 
 public class ImagePanel extends Panel {
 
-  private Snapshot snap;
+  private List<IShape> shapes;
   private ImageLabel label;
   private int size;
 
   public ImagePanel() {
     this.setPreferredSize(new Dimension(600, 600));
     this.setBackground(Color.WHITE);
-    this.snap = null;
+    this.shapes = null;
     this.label = null;
     this.size = 0;
   }
 
 
 
-  public void setShapes(Snapshot snap) {
-    this.snap = snap;
+  public void setShapes(List<IShape> shapes) {
+    this.shapes = shapes;
   }
 
   public void setSize(int size) {
@@ -40,7 +41,7 @@ public class ImagePanel extends Panel {
 
     Graphics2D g2d = (Graphics2D) g;
 
-      for (Shape shape : snap.getShapes()) {
+      for (IShape shape : shapes) {
         int[] properties = shape.scale(shape.getType(), size, 600);
         this.draw(g2d, properties[0], properties[1], properties[2], properties[3], properties[4], shape.getType());
       }
@@ -59,15 +60,6 @@ public class ImagePanel extends Panel {
         g.fillOval(newX, newY, newFirst, newSecond);
     }
   }
-
-  public void setImage(String pathname) {
-    if (this.label == null)  {
-      this.label = new ImageLabel(pathname);
-      this.add(this.label);
-    }
-    this.label.setImage(pathname);
-  }
-
 
   public void saveImage(int snapNumber) throws IOException {
     BufferedImage image = new BufferedImage(600, 600, BufferedImage.TYPE_INT_RGB);

@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.util.List;
 
 import model.photoalbum.canvas.ICanvas;
+import model.shape.IShape;
 import model.shape.Shape;
 
 /**
@@ -15,7 +16,7 @@ public class Snapshot implements ISnapshot {
   private String id;
   private String description;
   private ICanvas canvas;
-  private List<Shape> shapes;
+  private List<IShape> shapes;
 
   /**
    * Instantiates a new Snapshot.
@@ -23,7 +24,7 @@ public class Snapshot implements ISnapshot {
    * @param description the description
    * @param canvas      the canvas
    */
-  public Snapshot(String description, ICanvas canvas, List<Shape> shapes) {
+  public Snapshot(String description, ICanvas canvas, List<IShape> shapes) {
     this.description = description;
     this.canvas = canvas;
     this.shapes = shapes;
@@ -59,7 +60,7 @@ public class Snapshot implements ISnapshot {
             canvas.toString();
   }
 
-  public List<Shape> getShapes() {
+  public List<IShape> getShapes() {
     return shapes;
   }
 }

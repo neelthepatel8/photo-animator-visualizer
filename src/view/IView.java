@@ -1,13 +1,13 @@
 package view;
 
-import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.util.List;
 
-import model.photoalbum.snapshot.Snapshot;
+import model.shape.IShape;
 
 public interface IView {
 
   void switchToNew(String imageName, String description, String id);
   void close();
-  void updatePicture(Snapshot snap, int size) throws IOException;
+  void savePicture(List<IShape> shapes, int size) throws IOException;
 }
