@@ -1,12 +1,12 @@
 package controller;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
-public class CommandReader {
+public class CommandReader implements ICommandReader {
 
   private String path;
 
@@ -14,29 +14,23 @@ public class CommandReader {
     this.path = path;
   }
 
-  public ArrayList<String> read() throws IOException {
+  public List<String> read() throws IOException {
 
-    ArrayList<String> commands = new ArrayList<String>();
+    List<String> commands = new ArrayList<>();
 
     BufferedReader reader = new BufferedReader(new FileReader(path));
-    String line = null;
 
+    String line;
     while ((line = reader.readLine()) != null) {
+
+      // If line is empty or a comment, ignore it.
       if (line.startsWith("#") || line.isEmpty())
         continue;
+
       commands.add(line.strip());
     }
+
     return commands;
 
-  }
-
-  public static void main(String[] args) {
-    try {
-      CommandReader reader = new CommandReader("src/assets/inputfiles/demo_input.txt");
-      ArrayList<String> commands = reader.read();
-        System.out.println(commands);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
   }
 }

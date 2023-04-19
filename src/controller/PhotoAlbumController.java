@@ -1,7 +1,5 @@
 package controller;
 
-import java.awt.*;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -42,7 +40,6 @@ public class PhotoAlbumController {
     }
 
     this.view.setImage("snap-0", true);
-
     this.view.setVisible(true);
   }
 
