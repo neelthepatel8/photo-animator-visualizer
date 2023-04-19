@@ -11,7 +11,7 @@ import view.IView;
 import view.PhotoAlbumView;
 
 
-public class PhotoAlbumController {
+public class PhotoAlbumController implements IController{
 
   private final IView view;
   private final IModel model;
@@ -65,7 +65,7 @@ public class PhotoAlbumController {
   }
 
   public static void main(String[] args) throws IOException, IllegalShapeException, NoSuchFieldException, IllegalAccessException {
-    PhotoAlbumController controller = new PhotoAlbumController();
+    IController controller = new PhotoAlbumController();
     controller.start();
   }
 }
