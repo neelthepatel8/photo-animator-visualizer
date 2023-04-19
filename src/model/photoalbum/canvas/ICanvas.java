@@ -1,4 +1,4 @@
-package model.photoalbum.snapshot;
+package model.photoalbum.canvas;
 
 import java.util.List;
 

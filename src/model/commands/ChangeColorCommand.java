@@ -2,7 +2,7 @@ package model.commands;
 
 import java.awt.Color;
 
-import model.photoalbum.Canvas;
+import model.photoalbum.canvas.Canvas;
 import model.shape.Shape;
 
 /**

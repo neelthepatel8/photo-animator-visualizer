@@ -1,11 +1,12 @@
-package model.photoalbum;
+package model.photoalbum.model;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import model.commands.Command;
 import model.exceptions.IllegalShapeException;
-import model.photoalbum.snapshot.ICanvas;
+import model.photoalbum.canvas.Canvas;
+import model.photoalbum.canvas.ICanvas;
 import model.photoalbum.snapshot.Snapshot;
 
 /**

@@ -1,8 +1,8 @@
-package model.photoalbum;
+package model.photoalbum.model;
 
 import model.commands.Command;
 import model.exceptions.IllegalShapeException;
-import model.photoalbum.snapshot.ICanvas;
+import model.photoalbum.canvas.ICanvas;
 import model.photoalbum.snapshot.Snapshot;
 
 public interface IModel {

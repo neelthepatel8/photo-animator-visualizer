@@ -2,9 +2,9 @@ package model.commands;
 
 import java.awt.Color;
 
-import model.photoalbum.Canvas;
-import model.photoalbum.IModel;
-import model.photoalbum.snapshot.ICanvas;
+import model.photoalbum.canvas.Canvas;
+import model.photoalbum.model.IModel;
+import model.photoalbum.canvas.ICanvas;
 
 public class CommandFactory {
 

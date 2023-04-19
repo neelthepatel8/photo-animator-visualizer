@@ -3,13 +3,13 @@ package model.photoalbum.snapshot;
 import java.sql.Timestamp;
 import java.util.List;
 
-import model.photoalbum.Canvas;
+import model.photoalbum.canvas.ICanvas;
 import model.shape.Shape;
 
 /**
  * The type Snapshot.
  */
-public class Snapshot {
+public class Snapshot implements ISnapshot {
 
   private Timestamp timestamp;
   private String id;

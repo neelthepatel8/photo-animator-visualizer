@@ -1,14 +1,11 @@
 package model.shape;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.function.Function;
+import java.awt.Color;
 
 /**
  * Shape class has properties of a shape and methods.
  */
-public class Shape {
+public class Shape implements IShape {
 
   private double x;
   private double y;
@@ -20,7 +17,6 @@ public class Shape {
   private double radiusX;
   private double radiusY;
   private double radius;
-  private Function<Graphics, Void> drawFunction;
 
   /**
    * Instantiates a new Shape.
@@ -36,8 +32,6 @@ public class Shape {
     this.radiusX = 0;
     this.radiusY = 0;
     this.radius = 0;
-    this.drawFunction = null;
-
   }
 
   /**

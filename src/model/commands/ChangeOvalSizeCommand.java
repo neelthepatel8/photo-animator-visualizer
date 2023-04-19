@@ -1,6 +1,6 @@
 package model.commands;
 
-import model.photoalbum.Canvas;
+import model.photoalbum.canvas.Canvas;
 import model.shape.Shape;
 
 public class ChangeOvalSizeCommand implements Command{

@@ -1,11 +1,10 @@
-package model.photoalbum;
+package model.photoalbum.canvas;
 
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
 import model.exceptions.IllegalShapeException;
-import model.photoalbum.snapshot.ICanvas;
 import model.shape.Shape;
 import model.shape.ShapeBuilder;
 

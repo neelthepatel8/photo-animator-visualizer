@@ -1,7 +1,7 @@
 package model.commands;
 
 import model.exceptions.IllegalShapeException;
-import model.photoalbum.snapshot.ICanvas;
+import model.photoalbum.canvas.ICanvas;
 
 /**
  * The type Create shape command.

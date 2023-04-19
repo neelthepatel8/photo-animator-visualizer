@@ -1,6 +1,6 @@
 package model.commands;
 
-import model.photoalbum.IModel;
+import model.photoalbum.model.IModel;
 
 /**
  * The type Take shapshot command.

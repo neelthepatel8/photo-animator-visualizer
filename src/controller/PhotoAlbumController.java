@@ -7,8 +7,8 @@ import controller.reader.CommandReader;
 import controller.reader.ICommandReader;
 import model.commands.CommandFactory;
 import model.exceptions.IllegalShapeException;
-import model.photoalbum.IModel;
-import model.photoalbum.PhotoAlbumModel;
+import model.photoalbum.model.IModel;
+import model.photoalbum.model.PhotoAlbumModel;
 import view.IView;
 import view.PhotoAlbumView;
 
