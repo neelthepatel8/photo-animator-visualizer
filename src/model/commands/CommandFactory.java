@@ -1,19 +1,16 @@
 package model.commands;
 
-import java.awt.*;
+import java.awt.Color;
 
 import model.photoalbum.Canvas;
 import model.photoalbum.IModel;
+import model.photoalbum.snapshot.ICanvas;
 
 public class CommandFactory {
 
-  private static IModel IModel;
-  private static Canvas canvas;
+  public static Command createCommand(String commandString, IModel model) {
 
-  public static Command createCommand(String commandString, IModel _I_model) {
-
-    IModel = _I_model;
-    canvas = IModel.getCanvas();
+    ICanvas canvas = model.getCanvas();
 
     String[] commandParts = commandString.trim().split("\\s+");
     String commandType = commandParts[0];
@@ -50,15 +47,12 @@ public class CommandFactory {
         return new RemoveShapeCommand(shapeName, canvas);
       case "snapshot":
         String description = commandString.replace(commandType, "").trim();
-        return new TakeShapshotCommand(description, IModel);
+        return new TakeShapshotCommand(description, model);
       case "history":
-        return new ViewHistoryCommand(IModel);
+        return new ViewHistoryCommand(model);
       default:
         System.out.println("Invalid command");
         return null;
     }
-
-
   }
-
 }

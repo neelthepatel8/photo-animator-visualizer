@@ -1,13 +1,13 @@
 package model.commands;
 
 import model.exceptions.IllegalShapeException;
-import model.photoalbum.Canvas;
+import model.photoalbum.snapshot.ICanvas;
 
 /**
  * The type Create shape command.
  */
 public class CreateShapeCommand implements Command {
-  private final Canvas canvas;
+  private final ICanvas canvas;
   private final String shapeType;
   private final String shapeProperties;
 
@@ -18,7 +18,7 @@ public class CreateShapeCommand implements Command {
    * @param shapeType       the shape type
    * @param shapeProperties the shape properties
    */
-  public CreateShapeCommand(Canvas canvas, String shapeType, String shapeProperties) {
+  public CreateShapeCommand(ICanvas canvas, String shapeType, String shapeProperties) {
     this.canvas = canvas;
     this.shapeType = shapeType;
     this.shapeProperties = shapeProperties;
@@ -26,8 +26,6 @@ public class CreateShapeCommand implements Command {
 
   @Override
   public void execute() throws IllegalShapeException, NoSuchFieldException, IllegalAccessException {
-    System.out.println(shapeType);
-    System.out.println(shapeProperties);
     canvas.create(shapeType, shapeProperties);
   }
 }

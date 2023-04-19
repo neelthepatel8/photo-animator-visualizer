@@ -14,7 +14,7 @@ public class Snapshot {
   private Timestamp timestamp;
   private String id;
   private String description;
-  private Canvas canvas;
+  private ICanvas canvas;
   private List<Shape> shapes;
 
   /**
@@ -23,7 +23,7 @@ public class Snapshot {
    * @param description the description
    * @param canvas      the canvas
    */
-  public Snapshot(String description, Canvas canvas, List<Shape> shapes) {
+  public Snapshot(String description, ICanvas canvas, List<Shape> shapes) {
     this.description = description;
     this.canvas = canvas;
     this.shapes = shapes;
@@ -35,9 +35,9 @@ public class Snapshot {
    * @param canvas      the canvas
    * @param description the description
    */
-  public void snap(Canvas canvas, String description) {
+  public void snap(ICanvas canvas, String description) {
     this.timestamp = new Timestamp(System.currentTimeMillis());
-    this.id = timestamp.toString() + "." + (int) (Math.random() * 25000);
+    this.id = timestamp + "." + (int) (Math.random() * 25000);
     this.description = description;
     this.canvas = canvas;
   }

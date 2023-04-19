@@ -1,4 +1,4 @@
-package controller;
+package controller.reader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

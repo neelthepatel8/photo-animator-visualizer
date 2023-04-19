@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/IController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/photoalbum/snapshot/ICanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CommandReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/reader/CommandReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ICommandReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/reader/ICommandReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeHeightCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeRadiusCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeRadiusXCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeRadiusYCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeWidthCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/RemoveShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/RemoveShapeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/IModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/PhotoAlbumModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/PhotoAlbumModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -71,7 +85,7 @@
       <updated>1681669249087</updated>
       <workItem from="1681669250469" duration="15928000" />
       <workItem from="1681833717205" duration="26753000" />
-      <workItem from="1681921161434" duration="2291000" />
+      <workItem from="1681921161434" duration="3049000" />
     </task>
     <servers />
   </component>

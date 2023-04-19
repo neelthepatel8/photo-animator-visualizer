@@ -5,6 +5,7 @@ import java.util.Map;
 
 import model.commands.Command;
 import model.exceptions.IllegalShapeException;
+import model.photoalbum.snapshot.ICanvas;
 import model.photoalbum.snapshot.Snapshot;
 
 /**
@@ -12,7 +13,7 @@ import model.photoalbum.snapshot.Snapshot;
  */
 public class PhotoAlbumModel implements IModel {
 
-  private final Canvas canvas;
+  private final ICanvas canvas;
   private final LinkedHashMap<Snapshot, String> snapshots;
 
   /**
@@ -20,7 +21,7 @@ public class PhotoAlbumModel implements IModel {
    */
   public PhotoAlbumModel() {
     this.canvas = new Canvas();
-    this.snapshots = new LinkedHashMap<Snapshot, String>();
+    this.snapshots = new LinkedHashMap<>();
   }
 
   /**
@@ -32,7 +33,7 @@ public class PhotoAlbumModel implements IModel {
    * @throws IllegalAccessException the illegal access exception
    */
   public void execute(Command command) throws IllegalShapeException, NoSuchFieldException, IllegalAccessException {
-    canvas.execute(command);
+    command.execute();
   }
 
   /**
@@ -60,17 +61,8 @@ public class PhotoAlbumModel implements IModel {
    *
    * @return the canvas
    */
-  public Canvas getCanvas() {
+  public ICanvas getCanvas() {
     return canvas;
-  }
-
-  /**
-   * Gets snapshots.
-   *
-   * @return the snapshots
-   */
-  public LinkedHashMap<Snapshot, String> getSnapshots() {
-    return snapshots;
   }
 
   public Snapshot getLastSnapshot() {

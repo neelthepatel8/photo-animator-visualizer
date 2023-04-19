@@ -2,47 +2,25 @@ package model.photoalbum;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import model.commands.Command;
 import model.exceptions.IllegalShapeException;
+import model.photoalbum.snapshot.ICanvas;
 import model.shape.Shape;
 import model.shape.ShapeBuilder;
-import model.shape.SnapshotShape;
 
 /**
  * The type Canvas.
  */
-public class Canvas {
+public class Canvas implements ICanvas {
 
   private static List<Shape> shapes = null;
-  private int snapshots;
 
   /**
    * Instantiates a new Canvas.
    */
   public Canvas() {
     shapes = new ArrayList<>();
-    snapshots = 0;
-  }
-
-  /**
-   * Execute.
-   *
-   * @param command the command
-   * @throws IllegalShapeException  the illegal shape exception
-   * @throws NoSuchFieldException   the no such field exception
-   * @throws IllegalAccessException the illegal access exception
-   */
-  public void execute(Command command) throws IllegalShapeException, NoSuchFieldException, IllegalAccessException {
-    command.execute();
-  }
-
-  public void addSnapShotShape() {
-    shapes.add(new SnapshotShape(snapshots));
-    snapshots += 1;
-    System.out.println(shapes);
   }
 
   /**
@@ -55,7 +33,7 @@ public class Canvas {
    * @throws NoSuchFieldException   the no such field exception
    * @throws IllegalAccessException the illegal access exception
    */
-  public void create(String shapeType, String shapeProperties) throws IllegalShapeException, NoSuchFieldException, IllegalAccessException {
+  public void create(String shapeType, String shapeProperties) throws IllegalShapeException {
     ShapeBuilder shapeBuilder = ShapeBuilder.getInstance();
     String[] properties = shapeProperties.trim().split("\\s+");
 
@@ -94,7 +72,6 @@ public class Canvas {
     shapes.add(shapeBuilder.build());
   }
 
-
   /**
    * Remove a shape from the list of shapes
    * Should check for shape name
@@ -104,7 +81,6 @@ public class Canvas {
   public void remove(String shapeName) {
     shapes.removeIf(shape -> shape.getName().equals(shapeName));
   }
-
 
   /**
    * Gets shapes.
@@ -130,7 +106,6 @@ public class Canvas {
     }
     return null;
   }
-
 
   @Override
   public String toString() {

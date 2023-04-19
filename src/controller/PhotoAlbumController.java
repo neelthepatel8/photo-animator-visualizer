@@ -3,6 +3,8 @@ package controller;
 import java.io.IOException;
 import java.util.List;
 
+import controller.reader.CommandReader;
+import controller.reader.ICommandReader;
 import model.commands.CommandFactory;
 import model.exceptions.IllegalShapeException;
 import model.photoalbum.IModel;
