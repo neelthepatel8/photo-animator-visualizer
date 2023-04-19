@@ -1,53 +1,71 @@
 package controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 import model.commands.CommandFactory;
 import model.exceptions.IllegalShapeException;
-import model.photoalbum.Model;
+import model.photoalbum.IModel;
 import model.photoalbum.PhotoAlbumModel;
+import view.IView;
 import view.PhotoAlbumView;
-import view.View;
 
 
 public class PhotoAlbumController {
 
-  private View view;
-  private Model model;
+  private final IView view;
+  private final IModel model;
 
   public PhotoAlbumController() throws IOException {
-
     this.view = new PhotoAlbumView(1000, 1000, this);
     this.model = new PhotoAlbumModel();
   }
 
-  public void start() throws IOException, IllegalShapeException, NoSuchFieldException, IllegalAccessException {
+  private List<String> parseCommands(String fileName) throws IOException {
+    ICommandReader reader = new CommandReader(fileName);
+    return reader.read();
+  }
 
-    CommandReader reader = new CommandReader("src/assets/inputfiles/buildings.txt");
-    ArrayList<String> commands = reader.read();
-
+  private int findCanvasSize(String command) {
     int size = 800;
-    String setupCommand = commands.get(0);
-    if (setupCommand.startsWith("#") && setupCommand.contains("canvas")) {
-      size = Integer.parseInt(setupCommand.split("\\s+")[4]);
+    if (command.startsWith("#") && command.contains("canvas")) {
+      size = Integer.parseInt(command.split("\\s+")[4]);
     }
+    return size;
+  }
+
+  private void runCommands(List<String> commands, int size) throws IllegalShapeException, NoSuchFieldException, IllegalAccessException, IOException {
+
     for (String command : commands) {
+
+      // Keep executing commands one after the other.
       this.model.execute(CommandFactory.createCommand(command, this.model));
+
+      // Update picture everytime there is a snapshot.
       if (command.split("\\s+")[0].equalsIgnoreCase("snapshot")) {
         this.view.updatePicture(this.model.getLastSnapshot(), size);
       }
     }
-
-    this.view.setImage("snap-0", true);
-    this.view.setVisible(true);
   }
 
+  public void start() throws IOException, IllegalShapeException, NoSuchFieldException, IllegalAccessException {
 
+    // Parse commands from the input file.
+    List<String> commands = this.parseCommands("src/assets/inputfiles/buildings.txt");
+
+    // If the file has a canvas size, get it.
+    int size = this.findCanvasSize(commands.get(0));
+
+    // Execute the commands from the file.
+    this.runCommands(commands, size);
+
+    // Set the first image and description.
+    this.view.setInitials();
+
+  }
 
   public static void main(String[] args) throws IOException, IllegalShapeException, NoSuchFieldException, IllegalAccessException {
     PhotoAlbumController controller = new PhotoAlbumController();
     controller.start();
-
   }
 }

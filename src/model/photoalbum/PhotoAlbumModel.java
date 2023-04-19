@@ -1,6 +1,5 @@
 package model.photoalbum;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -11,7 +10,7 @@ import model.photoalbum.snapshot.Snapshot;
 /**
  * The type Photo album.
  */
-public class PhotoAlbumModel implements Model{
+public class PhotoAlbumModel implements IModel {
 
   private final Canvas canvas;
   private final LinkedHashMap<Snapshot, String> snapshots;

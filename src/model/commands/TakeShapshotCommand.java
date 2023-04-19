@@ -1,28 +1,27 @@
 package model.commands;
 
-import model.photoalbum.Model;
-import model.photoalbum.PhotoAlbumModel;
+import model.photoalbum.IModel;
 
 /**
  * The type Take shapshot command.
  */
 public class TakeShapshotCommand implements Command {
   private final String description;
-  private final Model photoAlbumModel;
+  private final IModel photoAlbumIModel;
 
   /**
    * Instantiates a new Take shapshot command.
    *
    * @param description the description
-   * @param photoAlbumModel  the photo album
+   * @param photoAlbumIModel  the photo album
    */
-  public TakeShapshotCommand(String description, Model photoAlbumModel) {
+  public TakeShapshotCommand(String description, IModel photoAlbumIModel) {
     this.description = description;
-    this.photoAlbumModel = photoAlbumModel;
+    this.photoAlbumIModel = photoAlbumIModel;
   }
 
   @Override
   public void execute() {
-    photoAlbumModel.snap(description);
+    photoAlbumIModel.snap(description);
   }
 }

@@ -1,25 +1,24 @@
 package model.commands;
 
-import model.photoalbum.Model;
-import model.photoalbum.PhotoAlbumModel;
+import model.photoalbum.IModel;
 
 /**
  * The type View history command.
  */
 public class ViewHistoryCommand implements Command {
-  private final Model photoAlbumModel;
+  private final IModel photoAlbumIModel;
 
   /**
    * Instantiates a new View history command.
    *
-   * @param photoAlbumModel the photo album
+   * @param photoAlbumIModel the photo album
    */
-  public ViewHistoryCommand(Model photoAlbumModel) {
-    this.photoAlbumModel = photoAlbumModel;
+  public ViewHistoryCommand(IModel photoAlbumIModel) {
+    this.photoAlbumIModel = photoAlbumIModel;
   }
 
   @Override
   public void execute() {
-    photoAlbumModel.history();
+    photoAlbumIModel.history();
   }
 }

@@ -9,25 +9,19 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Objects;
 
 import javax.swing.*;
 
 import controller.PhotoAlbumController;
 import model.photoalbum.snapshot.Snapshot;
-import model.shape.Shape;
-import model.shape.SnapshotShape;
 import view.components.labels.ImageLabel;
 import view.components.labels.Label;
-import view.components.labels.SnapshotLabel;
 import view.components.panels.ImagePanel;
 import view.components.panels.Panel;
 
-public class PhotoAlbumView extends JFrame implements View, KeyListener {
+public class PhotoAlbumView extends JFrame implements IView, KeyListener {
 
   /** Misc **/
   private PhotoAlbumController controller;
@@ -139,7 +133,7 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
 
   public void showSelectOptions(MouseEvent e) {
     JPopupMenu menu = new JPopupMenu();
-    View view = this;
+    IView IView = this;
     for (Snapshot snapshot: snapshots) {
       JMenuItem item = new JMenuItem();
       item.setText(snapshot.getId());
@@ -148,9 +142,9 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
         @Override
         public void actionPerformed(ActionEvent e) {
           Snapshot snap = getSnapshotFromID(item.getText());
-          view.changeImage("snap-" + snapshots.indexOf(snap));
-          view.setDescription(snap.getDescription());
-          view.setId(snap.getId());
+          IView.changeImage("snap-" + snapshots.indexOf(snap));
+          IView.setDescription(snap.getDescription());
+          IView.setId(snap.getId());
           currentSnap = snapshots.indexOf(snap);
         }
       });
@@ -231,6 +225,9 @@ public class PhotoAlbumView extends JFrame implements View, KeyListener {
     idLabel.setText(id);
   }
 
+  public void setInitials() {
+    this.setImage("snap-0", true);
+  }
   public void setDescription(String description) {
     descriptionLabel.setText(description);
   }
