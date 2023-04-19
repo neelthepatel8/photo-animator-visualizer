@@ -1,13 +1,14 @@
 package model.shape;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.function.Function;
 
 /**
  * Shape class has properties of a shape and methods.
  */
-public class Shape implements DrawerFunction{
+public class Shape {
 
   private double x;
   private double y;
@@ -48,8 +49,7 @@ public class Shape implements DrawerFunction{
     return x;
   }
 
-  public void draw(Graphics g, int forCanvas, int toCanvas) {
-    g.setColor(color);
+  public int[] scale(String shapeType, int forCanvas, int toCanvas) {
     int newX = (int) ((x / forCanvas) * toCanvas);
     int newY = (int) ((y / forCanvas) * toCanvas);
     int newWidth = (int) ((width / forCanvas) * toCanvas);
@@ -58,14 +58,15 @@ public class Shape implements DrawerFunction{
     int newRadiusY = (int) ((radiusY / forCanvas) * toCanvas);
     int newRadius = (int) ((radius / forCanvas) * toCanvas);
 
-    switch(type.toLowerCase()) {
+    switch (shapeType) {
       case "rectangle":
-        g.fillRect(newX, newY, newWidth, newHeight);
+        return new int[]{newX, newY, newWidth, newHeight, color.getRGB()};
       case "oval":
-          g.fillOval(newX, newY, newRadiusX, newRadiusY);
+        return new int[]{newX, newY, newRadiusX, newRadiusY, color.getRGB()};
       case "circle":
-          g.fillOval(newX, newY, newRadius, newRadius);
+        return new int[]{newX, newY, newRadius, newRadius, color.getRGB()};
     }
+    return null;
   }
 
   /**

@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/inputfiles/buildings.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/WebView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/pengu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/pengu2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/snapshots/snap-0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/snapshots/snap-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/snapshots/snap-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/shape/DrawerFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shape/DrawerFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/shape/DrawerFunction.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/shape/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/shape/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/PhotoAlbumView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/components/labels/ImageLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/labels/ImageLabel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/components/panels/ImagePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/panels/ImagePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,22 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/assets/inputfiles",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/assets/inputfiles&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/inputfiles" />
@@ -86,7 +71,8 @@
       <option name="presentableId" value="Default" />
       <updated>1681669249087</updated>
       <workItem from="1681669250469" duration="15928000" />
-      <workItem from="1681833717205" duration="26707000" />
+      <workItem from="1681833717205" duration="26753000" />
+      <workItem from="1681921161434" duration="915000" />
     </task>
     <servers />
   </component>

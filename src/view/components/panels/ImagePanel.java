@@ -41,9 +41,23 @@ public class ImagePanel extends Panel {
     Graphics2D g2d = (Graphics2D) g;
 
       for (Shape shape : snap.getShapes()) {
-        shape.draw(g2d, size,600);
+        int[] properties = shape.scale(shape.getType(), size, 600);
+        this.draw(g2d, properties[0], properties[1], properties[2], properties[3], properties[4], shape.getType());
       }
 
+  }
+
+  private void draw(Graphics g, int newX, int newY, int newFirst, int newSecond, int color, String type) {
+    g.setColor(new Color(color));
+
+    switch(type.toLowerCase()) {
+      case "rectangle":
+        g.fillRect(newX, newY, newFirst, newSecond);
+      case "oval":
+        g.fillOval(newX, newY, newFirst, newSecond);
+      case "circle":
+        g.fillOval(newX, newY, newFirst, newSecond);
+    }
   }
 
   public void setImage(String pathname) {
