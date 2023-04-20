@@ -10,18 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/assets/screenshots/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/assets/screenshots/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/assets/screenshots/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/assets/screenshots/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/assets/screenshots/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/assets/screenshots/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/assets/screenshots/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/components/labels/ImageLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/labels/ImageLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/graphical/GraphicalView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/graphical/GraphicalView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +52,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots",
+    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,9 +67,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/resources" />
       <recent name="$PROJECT_DIR$/src/resources/assets/screenshots" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/resources" />
       <recent name="$PROJECT_DIR$/src/resources/assets" />
       <recent name="$PROJECT_DIR$/src/assets/inputfiles" />
     </key>
@@ -227,7 +217,7 @@
       <workItem from="1681921161434" duration="20359000" />
       <workItem from="1682007635720" duration="198000" />
       <workItem from="1682007898271" duration="18427000" />
-      <workItem from="1682032916657" duration="1628000" />
+      <workItem from="1682032916657" duration="1668000" />
     </task>
     <servers />
   </component>
