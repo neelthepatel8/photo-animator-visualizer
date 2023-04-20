@@ -13,8 +13,8 @@ import app.model.exceptions.InvalidCommandException;
 import app.model.photoalbum.model.IModel;
 import app.model.photoalbum.model.PhotoAlbumModel;
 import app.model.photoalbum.snapshot.Snapshot;
-import app.view.graphical.IView;
-import app.view.graphical.GraphicalView;
+import app.view.graphical.IGraphicalView;
+import app.view.graphical.GraphicalGraphicalView;
 import app.view.web.IWebView;
 import app.view.web.WebView;
 
@@ -24,7 +24,7 @@ public class PhotoAlbumController implements IController{
   private final String inputFile;
 
   /** MVC **/
-  private IView view;
+  private IGraphicalView view;
   private IWebView webView;
   private final IModel model;
 
@@ -35,7 +35,7 @@ public class PhotoAlbumController implements IController{
     this.inputFile = inputFile;
 
     if (viewType.equalsIgnoreCase("graphical"))
-      this.view = new GraphicalView(xMax, yMax, this);
+      this.view = new GraphicalGraphicalView(xMax, yMax, this);
 
     if (viewType.equalsIgnoreCase("web"))
       this.webView = new WebView(xMax, yMax, outputFile);
@@ -46,7 +46,7 @@ public class PhotoAlbumController implements IController{
   @Override
   public void start() throws IOException, IllegalShapeException, NoSuchFieldException, IllegalAccessException, InvalidCommandException {
 
-    List<String> commands = this.parseCommands("src/assets/inputfiles/" + inputFile);
+    List<String> commands = this.parseCommands(inputFile);
 
     int size = this.findCanvasSize(commands.get(0));
 

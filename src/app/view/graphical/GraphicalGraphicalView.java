@@ -12,12 +12,13 @@ import javax.swing.*;
 
 import app.controller.IController;
 import app.model.shape.IShape;
+import app.view.IView;
 import app.view.components.labels.ImageLabel;
 import app.view.components.labels.Label;
 import app.view.components.panels.ImagePanel;
 import app.view.components.panels.Panel;
 
-public class GraphicalView extends JFrame implements IView {
+public class GraphicalGraphicalView extends JFrame implements IGraphicalView, IView {
 
   /** Misc **/
   private final IController controller;
@@ -42,7 +43,7 @@ public class GraphicalView extends JFrame implements IView {
   Font sansSerifSmall;
 
 
-  public GraphicalView(int width, int height, IController controller) throws IOException {
+  public GraphicalGraphicalView(int width, int height, IController controller) throws IOException {
 
     this.controller = controller;
     this.width = width;
@@ -63,7 +64,7 @@ public class GraphicalView extends JFrame implements IView {
     for (String id: snapshotIDs) {
       JMenuItem item = new JMenuItem();
       item.setText(id);
-      IView view = this;
+      IGraphicalView view = this;
 
       item.addActionListener(new ActionListener() {
         @Override
@@ -122,7 +123,7 @@ public class GraphicalView extends JFrame implements IView {
   }
 
   private void setupEventHandlers() {
-    IView view = this;
+    IGraphicalView view = this;
 
     closeLabel.addMouseListener(new MouseAdapter() {
       @Override
@@ -214,5 +215,10 @@ public class GraphicalView extends JFrame implements IView {
 
   private void setDescription(String description) {
     descriptionLabel.setText(description);
+  }
+
+  @Override
+  public String getViewType() {
+    return "GRAPHICAL";
   }
 }

@@ -42,7 +42,44 @@ public class HTMLFactory {
   }
 
   public static String linkStylesheet(String fileName) {
-    return String.format("\t\t<link rel='stylesheet' href='%s' />\n", "../styles/" + fileName);
+    return """
+            <style>
+            \t\t\t* {
+            \t\t\t\tbackground-color: #FFFFF0;
+            \t\t\t}
+            \t\t\tbody {
+            \t\t\t\twidth: 80%;
+            \t\t\t\tmargin: auto;
+            \t\t\t}
+            \t\t\tbody {
+            \t\t\t\ttext-align: center;
+            \t\t\t\tfont-family: "American Typewriter";
+            \t\t\t\tfont-weight: normal;
+            \t\t\t}
+            \t\t\th3 {
+            \t\t\t\tfont-weight: normal;
+            \t\t\t\tfont-size: 2rem;
+            \t\t\t}
+            \t\t\t.image {
+            \t\t\t\tborder-bottom: 1px solid gray;
+            \t\t\t\tpadding-bottom: 30px;
+            \t\t\t}
+            \t\t\tsvg {
+            \t\t\t\tborder-radius: 12px;
+            \t\t\t}
+
+            \t\t\th2 {
+            \t\t\t\tfont-weight: bold;
+            \t\t\t\tfont-size: 3rem;
+            \t\t\t}
+            \t\t\th1 {
+            \t\t\t\tpadding: 40px;
+            \t\t\t\tfont-size: 8rem;
+            \t\t\t}
+            \t\t\tsvg {
+            \t\t\t\tborder: 1px solid black;
+            \t\t\t}
+            \t\t</style>""";
   }
 
   public static String generateLargeHeading(String text) {

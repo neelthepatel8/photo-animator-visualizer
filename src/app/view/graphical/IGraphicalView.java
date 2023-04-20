@@ -6,7 +6,7 @@ import java.util.List;
 
 import app.model.shape.IShape;
 
-public interface IView {
+public interface IGraphicalView {
   void switchToNew(List<IShape> shapes, String description, String id);
   void close();
   void loadSnapshot(List<IShape> shapes, int size) throws IOException;

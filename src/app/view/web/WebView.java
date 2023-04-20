@@ -7,10 +7,11 @@ import java.util.List;
 
 import app.model.photoalbum.snapshot.Snapshot;
 import app.model.shape.IShape;
+import app.view.IView;
 import app.view.web.factories.HTMLFactory;
 import app.view.web.factories.SVGFactory;
 
-public class WebView implements IWebView {
+public class WebView implements IWebView, IView {
 
   private List<Snapshot> snapshots;
   private final int width;
@@ -25,7 +26,7 @@ public class WebView implements IWebView {
 
   private void writeToFile(String html) throws IOException {
 
-    BufferedWriter writer = new BufferedWriter(new FileWriter("src/app/view/web/output/" + outputFile));
+    BufferedWriter writer = new BufferedWriter(new FileWriter("src/resources/" + outputFile));
     writer.write(html);
     writer.close();
 
@@ -100,4 +101,8 @@ public class WebView implements IWebView {
     return svg.toString();
   }
 
+  @Override
+  public String getViewType() {
+    return "WEB";
+  }
 }
