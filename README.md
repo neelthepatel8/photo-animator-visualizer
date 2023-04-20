@@ -20,8 +20,22 @@
 ### Static HTML
 To check the static HTML page, just go to src/resources/ and Open the buildingsOut.html file in your browser. 
 
+Command line args for web view:
+```sql
+-in src/resources/buildings.txt -out out.html -view web 800 800
+```
+
 ### GUI App
-To run the Swing App, run the App.java main file in src/app with the -view command line arg as "graphical". Default size is set to 1000 by 1000.
+To run the Graphical Interface, make a configuration with the command line as follows:
+Put the required input file in the specified path: `src/resources/`
+```sql
+-in <inputfile-path> -view graphical 1000 1000
+```
+
+Example:
+```sql
+-in src/resources/buildings.txt -view graphical 1000 1000
+```
 
 # Sample Run of Graphical Interface
 ### First Load:
@@ -33,8 +47,7 @@ To run the Swing App, run the App.java main file in src/app with the -view comma
 ### Reached Selected Snapshot:
 
 # Sample Run of Web Interface
-Please click here to see the web interface
-
+Please click here to see the web interface: https://neelthepatel8.github.io/cs5004-hw9/
 
 # HW8 Previous Part:
 # Design

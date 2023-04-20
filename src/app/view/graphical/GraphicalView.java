@@ -100,7 +100,7 @@ public class GraphicalView extends JFrame implements IGraphicalView, IView {
     this.setupEventHandlers();
 
     this.setContentPane(mainPanel);
-    this.validate();
+
     this.loadSnapshot(shapes, size);
     this.setDescription(desc);
     this.setId(id);
@@ -166,7 +166,6 @@ public class GraphicalView extends JFrame implements IGraphicalView, IView {
   private void createLayout() {
     mainPanel = new Panel();
     mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
-
 
     Panel descriptionPanel = new Panel(new BorderLayout());
     Panel textPanel = new Panel(new FlowLayout(FlowLayout.CENTER, 0, 0));
