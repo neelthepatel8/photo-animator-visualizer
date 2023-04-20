@@ -1,4 +1,4 @@
-package testcontroller;
+package testpackage;
 
 import org.junit.Test;
 
@@ -26,6 +26,5 @@ public class PhotoAlbumControllerTest {
     controller.start();
     assertEquals(1, 1);
   }
-
 
 }

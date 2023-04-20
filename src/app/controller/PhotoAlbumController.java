@@ -12,9 +12,9 @@ import app.model.exceptions.IllegalShapeException;
 import app.model.exceptions.InvalidCommandException;
 import app.model.photoalbum.model.IModel;
 import app.model.photoalbum.model.PhotoAlbumModel;
-import app.model.photoalbum.snapshot.Snapshot;
+import app.model.photoalbum.snapshot.ISnapshot;
 import app.view.graphical.IGraphicalView;
-import app.view.graphical.GraphicalGraphicalView;
+import app.view.graphical.GraphicalView;
 import app.view.web.IWebView;
 import app.view.web.WebView;
 
@@ -35,7 +35,7 @@ public class PhotoAlbumController implements IController{
     this.inputFile = inputFile;
 
     if (viewType.equalsIgnoreCase("graphical"))
-      this.view = new GraphicalGraphicalView(xMax, yMax, this);
+      this.view = new GraphicalView(xMax, yMax, this);
 
     if (viewType.equalsIgnoreCase("web"))
       this.webView = new WebView(xMax, yMax, outputFile);
@@ -50,21 +50,32 @@ public class PhotoAlbumController implements IController{
 
     int size = this.findCanvasSize(commands.get(0));
 
-    this.runCommands(commands, size);
+    List<ISnapshot> snapshots = this.generateAllSnapshots();
 
     if (webView != null) {
-      webView.setSnapshots(this.model.getSnapshots());
+      webView.setSnapshots(snapshots);
       webView.loadPage();
     }
     else if (view != null) {
-      Snapshot firstSnap = this.model.getNextSnapshot(true);
+      ISnapshot firstSnap = this.model.getNextSnapshot(true);
       this.view.initialize(firstSnap.getShapes(), firstSnap.getDescription(), firstSnap.getId(), size);
     }
   }
 
   @Override
+  public List<ISnapshot> generateAllSnapshots() throws IOException, InvalidCommandException, IllegalShapeException, NoSuchFieldException, IllegalAccessException {
+    List<String> commands = this.parseCommands(inputFile);
+
+    int size = this.findCanvasSize(commands.get(0));
+
+    this.runCommands(commands, size);
+
+    return this.model.getSnapshots();
+  }
+
+  @Override
   public boolean handleNext(MouseEvent e) {
-    Snapshot nextSnap = this.model.getNextSnapshot();
+    ISnapshot nextSnap = this.model.getNextSnapshot();
     if (nextSnap == null) return false;
     this.view.switchToNew(nextSnap.getShapes(), nextSnap.getDescription(), nextSnap.getId());
     return true;
@@ -72,7 +83,7 @@ public class PhotoAlbumController implements IController{
 
   @Override
   public boolean handlePrevious(MouseEvent e) {
-    Snapshot prevSnap = this.model.getPreviousSnapshot();
+    ISnapshot prevSnap = this.model.getPreviousSnapshot();
     if (prevSnap == null) return false;
     this.view.switchToNew(prevSnap.getShapes(), prevSnap.getDescription(), prevSnap.getId());
     return true;
@@ -105,7 +116,7 @@ public class PhotoAlbumController implements IController{
 
   @Override
   public boolean handleSnapshotSelection(String id) {
-    Snapshot found = this.model.getSnapshotFromID(id);
+    ISnapshot found = this.model.getSnapshotFromID(id);
     if (found == null) return false;
     this.view.switchToNew(found.getShapes(), found.getDescription(), found.getId());
     return true;

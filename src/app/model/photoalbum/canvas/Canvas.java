@@ -1,6 +1,6 @@
 package app.model.photoalbum.canvas;
 
-import java.awt.Color;
+import app.util.Color;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,7 +1,6 @@
 package app.view.components.panels;
 
 import java.awt.*;
-
 import java.util.List;
 
 import app.model.shape.IShape;
@@ -15,7 +14,7 @@ public class ImagePanel extends Panel {
 
   public ImagePanel() {
     this.setPreferredSize(new Dimension(600, 600));
-    this.setBackground(Color.WHITE);
+    this.setBackground(new java.awt.Color(255, 255, 255));
     this.shapes = null;
     this.label = null;
     this.size = 0;
@@ -44,7 +43,7 @@ public class ImagePanel extends Panel {
   }
 
   private void draw(Graphics g, int newX, int newY, int newFirst, int newSecond, int color, String type) {
-    g.setColor(new Color(color));
+    g.setColor(new java.awt.Color(color));
 
     switch(type.toLowerCase()) {
       case "rectangle":

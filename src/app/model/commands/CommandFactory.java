@@ -1,6 +1,6 @@
 package app.model.commands;
 
-import java.awt.Color;
+import app.util.Color;
 
 import app.model.exceptions.InvalidCommandException;
 import app.model.photoalbum.canvas.Canvas;

@@ -8,6 +8,7 @@ import app.model.commands.Command;
 import app.model.exceptions.IllegalShapeException;
 import app.model.photoalbum.canvas.Canvas;
 import app.model.photoalbum.canvas.ICanvas;
+import app.model.photoalbum.snapshot.ISnapshot;
 import app.model.photoalbum.snapshot.Snapshot;
 import app.model.shape.IShape;
 
@@ -17,9 +18,9 @@ import app.model.shape.IShape;
 public class PhotoAlbumModel implements IModel {
 
   private final ICanvas canvas;
-  private final LinkedHashMap<Snapshot, String> snapshots;
-  private final ArrayList<Snapshot> snapshotTrackerList;
-  private int currentSnapshot = 0;
+  private final LinkedHashMap<ISnapshot, String> snapshots;
+  private final ArrayList<ISnapshot> snapshotTrackerList;
+  private int currentISnapshot = 0;
 
   /**
    * Instantiates a new Photo album.
@@ -49,7 +50,7 @@ public class PhotoAlbumModel implements IModel {
    */
   public void snap(String description) {
     List<IShape> snapshotShapes = new ArrayList<>(canvas.getShapes());
-    Snapshot snapshot = new Snapshot(description, canvas, snapshotShapes);
+    ISnapshot snapshot = new Snapshot(description, canvas, snapshotShapes);
     snapshot.snap(canvas, description);
     snapshots.put(snapshot, snapshot.toString());
     snapshotTrackerList.add(snapshot);
@@ -59,42 +60,42 @@ public class PhotoAlbumModel implements IModel {
    * History.
    */
   public void history() {
-    for (Snapshot snapshot : snapshots.keySet()) {
+    for (ISnapshot snapshot : snapshots.keySet()) {
       System.out.println(snapshots.get(snapshot));
     }
   }
 
   @Override
-  public Snapshot getNextSnapshot() {
-    if (currentSnapshot + 1 >= snapshotTrackerList.size()) {
+  public ISnapshot getNextSnapshot() {
+    if (currentISnapshot + 1 >= snapshotTrackerList.size()) {
       return null;
     }
-    currentSnapshot += 1;
-    return snapshotTrackerList.get(currentSnapshot);
+    currentISnapshot += 1;
+    return snapshotTrackerList.get(currentISnapshot);
   }
 
   @Override
-  public Snapshot getNextSnapshot(boolean first) {
-    if (currentSnapshot + 1 >= snapshotTrackerList.size() && snapshotTrackerList.size() != 1) {
+  public ISnapshot getNextSnapshot(boolean first) {
+    if (currentISnapshot + 1 >= snapshotTrackerList.size() && snapshotTrackerList.size() != 1) {
       return null;
     }
     return snapshotTrackerList.get(0);
   }
 
   @Override
-  public Snapshot getPreviousSnapshot() {
-    if (currentSnapshot - 1 < 0) {
+  public ISnapshot getPreviousSnapshot() {
+    if (currentISnapshot - 1 < 0) {
       return null;
     }
-    currentSnapshot -= 1;
-    return snapshotTrackerList.get(currentSnapshot);
+    currentISnapshot -= 1;
+    return snapshotTrackerList.get(currentISnapshot);
   }
 
   @Override
-  public Snapshot getSnapshotFromID(String id) {
-    for (Snapshot snapshot: snapshots.keySet()) {
+  public ISnapshot getSnapshotFromID(String id) {
+    for (ISnapshot snapshot: snapshots.keySet()) {
       if (snapshot.getId().equalsIgnoreCase(id)) {
-        currentSnapshot = snapshotTrackerList.indexOf(snapshot);
+        currentISnapshot = snapshotTrackerList.indexOf(snapshot);
         return snapshot;
       }
     }
@@ -102,7 +103,7 @@ public class PhotoAlbumModel implements IModel {
   }
 
   @Override
-  public List<Snapshot> getSnapshots() {
+  public List<ISnapshot> getSnapshots() {
     return this.snapshotTrackerList;
   }
 

@@ -1,12 +1,12 @@
 package app.model.shape;
 
-import java.awt.Color;
+import app.util.IColor;
 
 public interface IShape {
   int[] scale(String shapeType, int forCanvas, int toCanvas);
   double getX();
   double getY();
-  Color getColor();
+  IColor getColor();
   String getName();
   String getType();
   double getWidth();
@@ -16,7 +16,7 @@ public interface IShape {
   double getRadius();
   void setX(double x);
   void setY(double y);
-  void setColor(Color color);
+  void setColor(IColor color);
   void setName(String name);
   void setType(String type);
   void setWidth(double width);

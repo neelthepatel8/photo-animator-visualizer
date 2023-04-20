@@ -1,6 +1,7 @@
 package app.model.shape;
 
-import java.awt.Color;
+import app.util.Color;
+import app.util.IColor;
 
 /**
  * Shape class has properties of a shape and methods.
@@ -9,7 +10,7 @@ public class Shape implements IShape {
 
   private double x;
   private double y;
-  private Color color;
+  private IColor color;
   private String name;
   private String type;
   private double width;
@@ -24,7 +25,7 @@ public class Shape implements IShape {
   public Shape() {
     this.x = 0;
     this.y = 0;
-    this.color = Color.BLACK;
+    this.color = null;
     this.name = "";
     this.type = "";
     this.width = 0;
@@ -77,7 +78,7 @@ public class Shape implements IShape {
    *
    * @return the color
    */
-  public Color getColor() {
+  public IColor getColor() {
     return color;
   }
 
@@ -167,7 +168,7 @@ public class Shape implements IShape {
    *
    * @param color the color
    */
-  public void setColor(Color color) {
+  public void setColor(IColor color) {
     this.color = color;
   }
 

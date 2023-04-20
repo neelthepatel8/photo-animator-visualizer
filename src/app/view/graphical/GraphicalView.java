@@ -18,7 +18,7 @@ import app.view.components.labels.Label;
 import app.view.components.panels.ImagePanel;
 import app.view.components.panels.Panel;
 
-public class GraphicalGraphicalView extends JFrame implements IGraphicalView, IView {
+public class GraphicalView extends JFrame implements IGraphicalView, IView {
 
   /** Misc **/
   private final IController controller;
@@ -43,7 +43,7 @@ public class GraphicalGraphicalView extends JFrame implements IGraphicalView, IV
   Font sansSerifSmall;
 
 
-  public GraphicalGraphicalView(int width, int height, IController controller) throws IOException {
+  public GraphicalView(int width, int height, IController controller) throws IOException {
 
     this.controller = controller;
     this.width = width;

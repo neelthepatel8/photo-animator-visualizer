@@ -7,7 +7,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-public class Image  {
+public class Image {
 
   private BufferedImage image;
   private ImageIcon icon;

@@ -1,6 +1,6 @@
 package app.model.shape;
 
-import java.awt.Color;
+import app.util.IColor;
 
 /**
  * The type Shape builder.
@@ -48,6 +48,9 @@ public class ShapeBuilder {
    * @return the x
    */
   public ShapeBuilder setX(double x) {
+    if (x < 0) {
+      throw new IllegalArgumentException("x cannot be negative");
+    }
     shape.setX(x);
     return this;
   }
@@ -59,6 +62,9 @@ public class ShapeBuilder {
    * @return the y
    */
   public ShapeBuilder setY(double y) {
+    if (y < 0) {
+      throw new IllegalArgumentException("y cannot be negative");
+    }
     shape.setY(y);
     return this;
   }
@@ -69,7 +75,10 @@ public class ShapeBuilder {
    * @param color the color
    * @return the color
    */
-  public ShapeBuilder setColor(Color color) {
+  public ShapeBuilder setColor(IColor color) {
+    if (color == null) {
+      throw new IllegalArgumentException("color cannot be null");
+    }
     shape.setColor(color);
     return this;
   }
@@ -81,6 +90,9 @@ public class ShapeBuilder {
    * @return the name
    */
   public ShapeBuilder setName(String name) {
+    if (name == null || name.isEmpty()) {
+      throw new IllegalArgumentException("name cannot be null");
+    }
     shape.setName(name);
     return this;
   }
@@ -92,6 +104,9 @@ public class ShapeBuilder {
    * @return the type
    */
   public ShapeBuilder setType(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("type cannot be null");
+    }
     shape.setType(type);
     return this;
   }
@@ -103,6 +118,9 @@ public class ShapeBuilder {
    * @return the width
    */
   public ShapeBuilder setWidth(double width) {
+    if (width < 0) {
+      throw new IllegalArgumentException("width cannot be negative");
+    }
     shape.setWidth(width);
     return this;
   }
@@ -114,6 +132,9 @@ public class ShapeBuilder {
    * @return the height
    */
   public ShapeBuilder setHeight(double height) {
+    if (height < 0) {
+      throw new IllegalArgumentException("height cannot be negative");
+    }
     shape.setHeight(height);
     return this;
   }
@@ -125,6 +146,9 @@ public class ShapeBuilder {
    * @return the radius x
    */
   public ShapeBuilder setRadiusX(double radiusX) {
+    if (radiusX < 0) {
+      throw new IllegalArgumentException("radiusX cannot be negative");
+    }
     shape.setRadiusX(radiusX);
     return this;
   }
@@ -136,6 +160,9 @@ public class ShapeBuilder {
    * @return the radius y
    */
   public ShapeBuilder setRadiusY(double radiusY) {
+    if (radiusY < 0) {
+      throw new IllegalArgumentException("radiusY cannot be negative");
+    }
     shape.setRadiusY(radiusY);
     return this;
   }
@@ -147,6 +174,9 @@ public class ShapeBuilder {
    * @return the radius
    */
   public ShapeBuilder setRadius(double radius) {
+    if (radius < 0) {
+      throw new IllegalArgumentException("radius cannot be negative");
+    }
     shape.setRadius(radius);
     return this;
   }

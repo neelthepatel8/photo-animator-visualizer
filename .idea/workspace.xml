@@ -10,37 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/cs5004_hw9_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/view/IView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/buildings.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/cs5004-hw9-2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/out.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/testcontroller/PhotoAlbumControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/util/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/util/IColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/testpackage/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/testpackage/ShapeBuilderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/testpackage/WebViewTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs5004-hw9-2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cs5004-hw9-2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/IController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller/PhotoAlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/PhotoAlbumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/components/labels/ImageLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/labels/ImageLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/components/labels/SnapshotLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/labels/SnapshotLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/graphical/GraphicalView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/graphical/GraphicalGraphicalView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/graphical/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/graphical/IGraphicalView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/commands/ChangeColorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/ChangeColorCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/photoalbum/canvas/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/canvas/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/photoalbum/model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/model/IModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/photoalbum/model/PhotoAlbumModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/model/PhotoAlbumModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/shape/IShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/shape/IShape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/shape/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/shape/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/shape/ShapeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/shape/ShapeBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/components/buttons/Button.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/components/buttons/ImageButton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/components/image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/image/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/components/panels/ImagePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/panels/ImagePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/graphical/GraphicalGraphicalView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/graphical/GraphicalView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/web/IWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/IWebView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/view/web/WebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/WebView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/web/factories/HTMLFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/factories/HTMLFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/close-default.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/images/close-default.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/close-hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/images/close-hover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/left-arrow-hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/images/left-arrow-hover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/left-arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/images/left-arrow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/right-arrow-hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/images/right-arrow-hover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/right-arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/images/right-arrow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/select-hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/images/select-hover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/select.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/images/select.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/inputfiles/buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/inputfiles/buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/inputfiles/demo_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/inputfiles/demo_input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/inputfiles/hoops.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/inputfiles/hoops.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/inputfiles/teris_wallpaper.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/inputfiles/teris_wallpaper.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/snapshots/snap-0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/snapshots/snap-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/snapshots/snap-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/assets/snapshots/snap-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/web/factories/SVGFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/factories/SVGFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/cs5004-hw9-2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/cs5004-hw9-2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/out.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buildingsOut.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testcontroller/PhotoAlbumControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/testpackage/PhotoAlbumControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +48,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,7 +79,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources",
+    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,15 +94,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/resources" />
       <recent name="$PROJECT_DIR$/src/resources/assets" />
       <recent name="$PROJECT_DIR$/src/assets/inputfiles" />
       <recent name="$PROJECT_DIR$/src/assets/snapshots" />
-      <recent name="$PROJECT_DIR$/src/assets/backgrounds" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/resources/styles" />
       <recent name="$PROJECT_DIR$/src/resources" />
+      <recent name="$PROJECT_DIR$/src/resources/styles" />
       <recent name="$PROJECT_DIR$/src/app/view/web/styles" />
       <recent name="$PROJECT_DIR$/src/app/view/web/output" />
     </key>
@@ -112,13 +110,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="testpackage" />
       <recent name="testcontroller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="model.commands" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.out.html">
+  <component name="RunManager" selected="JUnit.AppTest.testIncorrectFile">
     <configuration name="Graphical" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="app.App" />
       <module name="cs5004-hw9-2" />
@@ -135,17 +134,100 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="out.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cs5004-hw9-2/resources/out.html" useBuiltInWebServerPort="true">
-      <method v="2" />
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cs5004-hw9-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testpackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testpackage" />
+      <option name="MAIN_CLASS_NAME" value="testpackage.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testCommandLineArgs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cs5004-hw9-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testpackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testpackage" />
+      <option name="MAIN_CLASS_NAME" value="testpackage.AppTest" />
+      <option name="METHOD_NAME" value="testCommandLineArgs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testCommandLineArgsWithGraphicalView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cs5004-hw9-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testpackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testpackage" />
+      <option name="MAIN_CLASS_NAME" value="testpackage.AppTest" />
+      <option name="METHOD_NAME" value="testCommandLineArgsWithGraphicalView" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testIncorrectFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cs5004-hw9-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testpackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testpackage" />
+      <option name="MAIN_CLASS_NAME" value="testpackage.AppTest" />
+      <option name="METHOD_NAME" value="testIncorrectFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cs5004-hw9-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testpackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testpackage" />
+      <option name="MAIN_CLASS_NAME" value="testpackage.WebViewTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Application.Web" />
       <item itemvalue="Application.Graphical" />
-      <item itemvalue="JavaScript Debug.out.html" />
+      <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.AppTest.testCommandLineArgs" />
+      <item itemvalue="JUnit.AppTest.testCommandLineArgsWithGraphicalView" />
+      <item itemvalue="JUnit.AppTest.testIncorrectFile" />
+      <item itemvalue="JUnit.WebViewTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.out.html" />
+        <item itemvalue="JUnit.AppTest.testIncorrectFile" />
+        <item itemvalue="JUnit.AppTest.testCommandLineArgsWithGraphicalView" />
+        <item itemvalue="JUnit.AppTest.testCommandLineArgs" />
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.WebViewTest" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +243,8 @@
       <workItem from="1681833717205" duration="26753000" />
       <workItem from="1681921161434" duration="20359000" />
       <workItem from="1682007635720" duration="198000" />
-      <workItem from="1682007898271" duration="8681000" />
+      <workItem from="1682007898271" duration="18427000" />
+      <workItem from="1682032916657" duration="351000" />
     </task>
     <servers />
   </component>
