@@ -23,6 +23,17 @@ To check the static HTML page, just go to src/resources/ and Open the buildingsO
 ### GUI App
 To run the Swing App, run the App.java main file in src/app with the -view command line arg as "graphical". Default size is set to 1000 by 1000.
 
+# Sample Run of Graphical Interface
+### First Load:
+### Clicked Next:
+### Clicked Next:
+### Clicked Next (Out of Snapshots):
+### Clicked Prev:
+### Clicked Select:
+### Reached Selected Snapshot:
+
+# Sample Run of Web Interface
+Please click here to see the web interface
 
 
 # HW8 Previous Part:

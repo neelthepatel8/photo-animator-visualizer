@@ -10,35 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/util/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/util/IColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/testpackage/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/testpackage/ShapeBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/testpackage/WebViewTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/IController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller/PhotoAlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/PhotoAlbumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model/commands/ChangeColorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/ChangeColorCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model/photoalbum/canvas/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/canvas/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model/photoalbum/model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/model/IModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model/photoalbum/model/PhotoAlbumModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/model/PhotoAlbumModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model/shape/IShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/shape/IShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model/shape/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/shape/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model/shape/ShapeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/shape/ShapeBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/components/buttons/Button.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/components/buttons/ImageButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/components/image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/image/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/components/panels/ImagePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/panels/ImagePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/graphical/GraphicalGraphicalView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/graphical/GraphicalView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/web/IWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/IWebView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/web/WebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/WebView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/web/factories/SVGFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/factories/SVGFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/cs5004-hw9-2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/cs5004-hw9-2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/out.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/buildingsOut.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testcontroller/PhotoAlbumControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/testpackage/PhotoAlbumControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +217,7 @@
       <workItem from="1681921161434" duration="20359000" />
       <workItem from="1682007635720" duration="198000" />
       <workItem from="1682007898271" duration="18427000" />
-      <workItem from="1682032916657" duration="351000" />
+      <workItem from="1682032916657" duration="598000" />
     </task>
     <servers />
   </component>
