@@ -84,6 +84,7 @@ public class WebView implements IWebView {
                   (int) shape.getWidth(),
                   shape.getColor()
           ));
+          break;
         case "oval":
           svg.append(SVGFactory.generateOval(
                   (int) shape.getX(),
@@ -92,6 +93,9 @@ public class WebView implements IWebView {
                   (int) shape.getRadiusY(),
                   shape.getColor()
           ));
+          break;
+        default:
+          throw new IllegalArgumentException();
       }
     }
     svg.append(SVGFactory.endSVG());

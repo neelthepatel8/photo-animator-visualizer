@@ -60,13 +60,10 @@ public class PhotoAlbumController implements IController{
 
   public void start() throws IOException, IllegalShapeException, NoSuchFieldException, IllegalAccessException, InvalidCommandException {
 
-    // Parse commands from the input file.
     List<String> commands = this.parseCommands("src/assets/inputfiles/buildings.txt");
 
-    // If the file has a canvas size, get it.
     int size = this.findCanvasSize(commands.get(0));
 
-    // Execute the commands from the file.
     this.runCommands(commands, size);
 
     webView.setSnapshots(this.model.getSnapshots());
