@@ -5,8 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/cli/CLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/web/HTMLFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/web/HTMLFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PhotoAlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/PhotoAlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/reader/CommandReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/reader/CommandReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/reader/ICommandReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/reader/ICommandReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeCircleSizeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/ChangeCircleSizeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeColorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/ChangeColorCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/ChangeNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeOvalSizeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/ChangeOvalSizeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeRectangleSizeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/ChangeRectangleSizeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/CreateShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/CreateShapeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/MoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/RemoveShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/RemoveShapeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/TakeShapshotCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/TakeShapshotCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ViewHistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/commands/ViewHistoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/exceptions/IllegalShapeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/exceptions/IllegalShapeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/exceptions/InvalidCommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/exceptions/InvalidCommandException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/canvas/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/canvas/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/canvas/ICanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/canvas/ICanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/model/IModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/model/PhotoAlbumModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/model/PhotoAlbumModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/snapshot/ISnapshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/snapshot/ISnapshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/photoalbum/snapshot/Snapshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/photoalbum/snapshot/Snapshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/shape/IShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/shape/IShape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/shape/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/shape/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/shape/ShapeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/shape/ShapeBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/buttons/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/buttons/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/buttons/ImageButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/buttons/ImageButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/image/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/labels/ImageLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/labels/ImageLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/labels/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/labels/Label.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/labels/SnapshotLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/labels/SnapshotLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/panels/ImagePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/panels/ImagePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/panels/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/components/panels/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/graphical/GraphicalView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/graphical/GraphicalView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/graphical/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/graphical/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/web/HTMLFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/factories/HTMLFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/web/IWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/IWebView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/web/SVGFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/factories/SVGFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/web/WebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/WebView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/web/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +60,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,22 +76,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/assets/inputfiles&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/assets/inputfiles",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/inputfiles" />
@@ -56,9 +101,35 @@
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/model/shape" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/view/web/styles" />
+      <recent name="$PROJECT_DIR$/src/app/view/web/output" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="model.commands" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.Graphical">
+    <configuration name="Graphical" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="app.App" />
+      <module name="cs5004-hw9-2" />
+      <option name="PROGRAM_PARAMETERS" value="-in buildings.txt -out index2.html -view graphical 1000 1000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Web" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
+      <option name="MAIN_CLASS_NAME" value="app.App" />
+      <module name="cs5004-hw9-2" />
+      <option name="PROGRAM_PARAMETERS" value="-in buildings.txt -out index2.html -view web 800 800" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Web" />
+      <item itemvalue="Application.Graphical" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,7 +141,9 @@
       <updated>1681669249087</updated>
       <workItem from="1681669250469" duration="15928000" />
       <workItem from="1681833717205" duration="26753000" />
-      <workItem from="1681921161434" duration="20330000" />
+      <workItem from="1681921161434" duration="20359000" />
+      <workItem from="1682007635720" duration="198000" />
+      <workItem from="1682007898271" duration="3078000" />
     </task>
     <servers />
   </component>
