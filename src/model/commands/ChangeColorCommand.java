@@ -3,14 +3,14 @@ package model.commands;
 import java.awt.Color;
 
 import model.photoalbum.canvas.Canvas;
-import model.shape.Shape;
+import model.shape.IShape;
 
 /**
  * The type Change color command.
  */
 public class ChangeColorCommand implements Command {
   private final Color color;
-  private final Shape shape;
+  private final IShape shape;
 
   /**
    * Instantiates a new Change color command.

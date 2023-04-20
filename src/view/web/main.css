@@ -1,0 +1,32 @@
+* {
+    background-color: #FFFFF0;
+}
+body {
+    width: 80%;
+    margin: auto;
+}
+body {
+    text-align: center;
+    font-family: "American Typewriter";
+    font-weight: normal;
+}
+h3 {
+    font-weight: normal;
+    font-size: 2rem;
+}
+.image {
+    border-bottom: 1px solid gray;
+    padding-bottom: 30px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+h1 {
+    padding: 40px;
+    font-size: 8rem;
+}
+svg {
+    border: 1px solid black;
+}

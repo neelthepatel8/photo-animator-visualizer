@@ -1,11 +1,11 @@
 package model.commands;
 
 import model.photoalbum.canvas.Canvas;
-import model.shape.Shape;
+import model.shape.IShape;
 
 public class ChangeCircleSizeCommand implements Command{
   private final double radius;
-  private final Shape shape;
+  private final IShape shape;
 
   public ChangeCircleSizeCommand(double radius, String shapeName) {
     this.radius = radius;

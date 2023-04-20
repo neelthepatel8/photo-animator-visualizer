@@ -1,12 +1,12 @@
 package model.commands;
 
 import model.photoalbum.canvas.Canvas;
-import model.shape.Shape;
+import model.shape.IShape;
 
 public class ChangeRectangleSizeCommand implements Command{
   private final double width;
   private final double height;
-  private final Shape shape;
+  private final IShape shape;
 
   public ChangeRectangleSizeCommand(double width, double height, String shapeName) {
     this.width = width;

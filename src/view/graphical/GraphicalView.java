@@ -1,7 +1,8 @@
-package view;
-
+package view.graphical;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
@@ -10,7 +11,6 @@ import java.util.List;
 import javax.swing.*;
 
 import controller.IController;
-import model.photoalbum.snapshot.Snapshot;
 import model.shape.IShape;
 import view.components.labels.ImageLabel;
 import view.components.labels.Label;
@@ -21,6 +21,7 @@ public class GraphicalView extends JFrame implements IView {
 
   /** Misc **/
   private IController controller;
+  private int size;
 
 
   /** Panels **/
@@ -28,6 +29,7 @@ public class GraphicalView extends JFrame implements IView {
   private Panel descriptionPanel;
   private ImagePanel imagePanel;
   private Panel buttonPanel;
+  private Panel textPanel;
   private Panel imageContainerPanel;
 
   /** Labels **/
@@ -37,7 +39,6 @@ public class GraphicalView extends JFrame implements IView {
   private Label selectLabel;
   private Label descriptionLabel;
   private Label idLabel;
-  private Label imageLabel;
 
   /** Fonts **/
   Font sansSerif;
@@ -51,15 +52,13 @@ public class GraphicalView extends JFrame implements IView {
     this.setTitle("Photo Album");
     this.setSize(new Dimension(width, height));
 
-    this.createLayout();
     this.setupInits();
+    this.createLayout();
     this.setDefaults();
     this.setupEventHandlers();
 
     this.setContentPane(mainPanel);
-    this.pack();
     this.validate();
-    this.setVisible(true);
 
   }
 
@@ -69,6 +68,7 @@ public class GraphicalView extends JFrame implements IView {
   }
 
   private void setupEventHandlers() {
+    IView view = this;
 
     closeLabel.addMouseListener(new MouseAdapter() {
       @Override
@@ -80,7 +80,7 @@ public class GraphicalView extends JFrame implements IView {
       @Override
       public void mouseClicked(MouseEvent e) {
         if (!controller.handlePrevious(e)) {
-          JOptionPane.showMessageDialog(null, "Out of Snaps!", "Error", JOptionPane.ERROR_MESSAGE);
+          view.error();
         }
       }
     });
@@ -89,7 +89,7 @@ public class GraphicalView extends JFrame implements IView {
       @Override
       public void mouseClicked(MouseEvent e) {
         if (!controller.handleNext(e)) {
-          JOptionPane.showMessageDialog(null, "Out of Snaps!", "Error", JOptionPane.ERROR_MESSAGE);
+          view.error();
         }
       }
     });
@@ -114,11 +114,13 @@ public class GraphicalView extends JFrame implements IView {
 
 
     descriptionPanel = new Panel(new BorderLayout());
+    textPanel = new Panel(new FlowLayout(FlowLayout.CENTER, 0, 0));
+
     descriptionLabel = new Label("");
     descriptionLabel.setFont(sansSerif);
-
-    descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0, 230, 0, 0));
-    descriptionPanel.add(descriptionLabel, BorderLayout.CENTER);
+    descriptionLabel.setBorder(BorderFactory.createEmptyBorder(20, 0, 0, 40));
+    textPanel.add(descriptionLabel);
+    descriptionPanel.add(textPanel, BorderLayout.CENTER);
 
     idLabel = new Label("");
     idLabel.setBorder(BorderFactory.createEmptyBorder(0, 350, 2, 0));
@@ -135,6 +137,8 @@ public class GraphicalView extends JFrame implements IView {
     imagePanel = new ImagePanel();
     imageContainerPanel.add(imagePanel);
 
+
+
     buttonPanel = new Panel(new FlowLayout(FlowLayout.CENTER, 50, 0));
     leftLabel = new ImageLabel("left-arrow", "left-arrow-hover");
     rightLabel = new ImageLabel("right-arrow", "right-arrow-hover");
@@ -149,29 +153,60 @@ public class GraphicalView extends JFrame implements IView {
     mainPanel.add(imageContainerPanel);
     mainPanel.add(buttonPanel);
 
-//    this.setInitials();
   }
 
-  public void switchToNew(String imageName, String description, String id) {
-    this.setImage(imageName);
+  public void switchToNew(List<IShape> shapes, String description, String id) {
+    this.loadSnapshot(shapes, this.size);
     this.setDescription(description);
     this.setId(id);
   }
 
   @Override
-  public void savePicture(List<IShape> shapes, int size) throws IOException {
+  public void loadSnapshot(List<IShape> shapes, int size){
     this.imagePanel.setShapes(shapes);
     this.imagePanel.setSize(size);
-    this.imagePanel.saveImage(0);
+    this.imagePanel.repaint();
+  }
+
+  public void initialize(List<IShape> shapes, String desc, String id, int size) {
+    this.size = size;
+    this.loadSnapshot(shapes, size);
+    this.setDescription(desc);
+    this.setId(id);
+    this.setVisible(true);
+  }
+
+  @Override
+  public void displaySnapshotList(List<String> snapshotIDs, MouseEvent e) {
+    JPopupMenu menu = new JPopupMenu();
+    for (String id: snapshotIDs) {
+      JMenuItem item = new JMenuItem();
+      item.setText(id);
+      IView view = this;
+
+      item.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+          if (!controller.handleSnapshotSelection(((JMenuItem) e.getSource()).getText())) {
+            view.error();
+          }
+        }
+      });
+
+      menu.add(item);
+    }
+
+    menu.show(e.getComponent(), 0, e.getComponent().getY());
+  }
+
+  public void error() {
+    JOptionPane.showMessageDialog(null, "Out of Snaps!", "Error", JOptionPane.ERROR_MESSAGE);
   }
 
   public void close() {
     this.dispose();
   }
 
-  public void setImage(String fileName) {
-    imageLabel.setImage(fileName);
-  }
   public void setId(String id) {
     idLabel.setText(id);
   }

@@ -2,13 +2,14 @@ package model.commands;
 
 import java.awt.Color;
 
+import model.exceptions.InvalidCommandException;
 import model.photoalbum.canvas.Canvas;
 import model.photoalbum.model.IModel;
 import model.photoalbum.canvas.ICanvas;
 
 public class CommandFactory {
 
-  public static Command createCommand(String commandString, IModel model) {
+  public static Command createCommand(String commandString, IModel model) throws InvalidCommandException {
 
     ICanvas canvas = model.getCanvas();
 
@@ -51,8 +52,7 @@ public class CommandFactory {
       case "history":
         return new ViewHistoryCommand(model);
       default:
-        System.out.println("Invalid command");
-        return null;
+        throw new InvalidCommandException("Invalid command");
     }
   }
 }

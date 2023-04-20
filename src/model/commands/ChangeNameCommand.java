@@ -1,6 +1,7 @@
 package model.commands;
 
 import model.photoalbum.canvas.Canvas;
+import model.shape.IShape;
 import model.shape.Shape;
 
 /**
@@ -8,7 +9,7 @@ import model.shape.Shape;
  */
 public class ChangeNameCommand implements Command {
   private final String name;
-  private final Shape shape;
+  private final IShape shape;
 
   /**
    * Instantiates a new Change name command.

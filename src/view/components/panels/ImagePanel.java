@@ -61,11 +61,5 @@ public class ImagePanel extends Panel {
     }
   }
 
-  public void saveImage(int snapNumber) throws IOException {
-    BufferedImage image = new BufferedImage(600, 600, BufferedImage.TYPE_INT_RGB);
-    Graphics g = image.getGraphics();
-    this.paintComponent(g);
-    ImageIO.write(image, "png", new File("src/assets/snapshots/snap-" + snapNumber + ".png"));
-  }
 
 }

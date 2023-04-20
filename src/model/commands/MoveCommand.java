@@ -1,7 +1,7 @@
 package model.commands;
 
 import model.photoalbum.canvas.Canvas;
-import model.shape.Shape;
+import model.shape.IShape;
 
 /**
  * The type Move command.
@@ -9,7 +9,7 @@ import model.shape.Shape;
 public class MoveCommand implements Command {
   private final double x;
   private final double y;
-  private final Shape shape;
+  private final IShape shape;
 
   /**
    * Instantiates a new Move command.

@@ -1,5 +1,7 @@
 package model.photoalbum.model;
 
+import java.util.List;
+
 import model.commands.Command;
 import model.exceptions.IllegalShapeException;
 import model.photoalbum.canvas.ICanvas;
@@ -10,5 +12,9 @@ public interface IModel {
   ICanvas getCanvas();
   void snap(String description);
   void history();
-  Snapshot getLastSnapshot();
+  Snapshot getNextSnapshot();
+  Snapshot getNextSnapshot(boolean first);
+  Snapshot getPreviousSnapshot();
+  Snapshot getSnapshotFromID(String id);
+  List<Snapshot> getSnapshots();
 }
