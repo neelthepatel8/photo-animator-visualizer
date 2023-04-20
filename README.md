@@ -39,12 +39,19 @@ Example:
 
 # Sample Run of Graphical Interface
 ### First Load:
+![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/1.png)
 ### Clicked Next:
+![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/2.png)
 ### Clicked Next:
+![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/3.png)
 ### Clicked Next (Out of Snapshots):
+![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/4.png)
 ### Clicked Prev:
+![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/5.png)
 ### Clicked Select:
+![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/6.png)
 ### Reached Selected Snapshot:
+![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/7.png)
 
 # Sample Run of Web Interface
 Please click here to see the web interface: https://neelthepatel8.github.io/cs5004-hw9/
