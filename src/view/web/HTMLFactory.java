@@ -34,7 +34,7 @@ public class HTMLFactory {
   }
 
   public static String end() {
-    return "</html>\n";
+    return "</html lang=''>\n";
   }
 
   public static String generateTitle(String text) {
