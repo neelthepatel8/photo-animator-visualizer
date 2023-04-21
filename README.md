@@ -40,16 +40,22 @@ Example:
 # Sample Run of Graphical Interface
 ### First Load:
 <img src="src/resources/assets/screenshots/1.png"/>
+
 ### Clicked Next:
 <img src="src/resources/assets/screenshots/2.png"/>
+
 ### Clicked Next:
 <img src="src/resources/assets/screenshots/3.png"/>
+
 ### Clicked Next (Out of Snapshots):
 <img src="src/resources/assets/screenshots/4.png"/>
+
 ### Clicked Prev:
 <img src="src/resources/assets/screenshots/5.png"/>
+
 ### Clicked Select:
 <img src="src/resources/assets/screenshots/6.png"/>
+
 ### Reached Selected Snapshot:
 <img src="src/resources/assets/screenshots/7.png"/>
 

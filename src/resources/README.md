@@ -39,19 +39,24 @@ Example:
 
 # Sample Run of Graphical Interface
 ### First Load:
-![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/1.png)
-### Clicked Next:
-![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/2.png)
-### Clicked Next:
-![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/3.png)
-### Clicked Next (Out of Snapshots):
-![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/4.png)
-### Clicked Prev:
-![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/5.png)
-### Clicked Select:
-![](/Users/neelthepatel/NEU/sem-2-spring-23/cs5004/cs5004-hw9-2/src/resources/assets/screenshots/6.png)
-### Reached Selected Snapshot:
+<img src="src/resources/assets/screenshots/1.png"/>
 
+### Clicked Next:
+<img src="src/resources/assets/screenshots/2.png"/>
+
+### Clicked Next:
+<img src="src/resources/assets/screenshots/3.png"/>
+
+### Clicked Next (Out of Snapshots):
+<img src="src/resources/assets/screenshots/4.png"/>
+
+### Clicked Prev:
+<img src="src/resources/assets/screenshots/5.png"/>
+
+### Clicked Select:
+<img src="src/resources/assets/screenshots/6.png"/>
+
+### Reached Selected Snapshot:
 <img src="src/resources/assets/screenshots/7.png"/>
 
 # Sample Run of Web Interface
