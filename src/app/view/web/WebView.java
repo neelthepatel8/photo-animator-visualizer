@@ -26,7 +26,7 @@ public class WebView implements IWebView, IView {
 
   private void writeToFile(String html) throws IOException {
 
-    BufferedWriter writer = new BufferedWriter(new FileWriter("src/resources/" + outputFile));
+    BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
     writer.write(html);
     writer.close();
 

@@ -12,7 +12,7 @@
     <list default="true" id="2e16cb14-62c3-4aae-9948-fac35b22df13" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/web/WebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/web/WebView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/cs5004-hw9-2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/cs5004-hw9-2.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +220,7 @@
       <workItem from="1682007635720" duration="198000" />
       <workItem from="1682007898271" duration="18427000" />
       <workItem from="1682032916657" duration="2874000" />
-      <workItem from="1682039768634" duration="242000" />
+      <workItem from="1682039768634" duration="483000" />
     </task>
     <servers />
   </component>

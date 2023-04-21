@@ -22,7 +22,7 @@ To check the static HTML page, just go to src/resources/ and Open the buildingsO
 
 Command line args for web view:
 ```sql
-java -jar src/resources/cs5004-hw9-2.jar -in src/resources/buildings.txt -view web -out src/resources/out.html  
+java -jar src/resources/cs5004-hw9-2.jar -in src/resources/buildings.txt -view web -out src/resources/out.html 800 800 
 ```
 
 ### GUI App
