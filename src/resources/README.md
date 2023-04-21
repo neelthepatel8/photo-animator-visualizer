@@ -22,20 +22,16 @@ To check the static HTML page, just go to src/resources/ and Open the buildingsO
 
 Command line args for web view:
 ```sql
--in src/resources/buildings.txt -out out.html -view web 800 800
+java -jar src/resources/cs5004-hw9-2.jar -in src/resources/buildings.txt -view web -out src/resources/out.html  
 ```
 
 ### GUI App
 To run the Graphical Interface, make a configuration with the command line as follows:
 Put the required input file in the specified path: `src/resources/`
 ```sql
--in <inputfile-path> -view graphical 1000 1000
+java -jar src/resources/cs5004-hw9-2.jar -in src/resources/buildings.txt -view graphical  
 ```
 
-Example:
-```sql
--in src/resources/buildings.txt -view graphical 1000 1000
-```
 
 # Sample Run of Graphical Interface
 ### First Load:
