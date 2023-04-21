@@ -8,7 +8,7 @@ import app.controller.PhotoAlbumController;
 import app.model.exceptions.IllegalShapeException;
 import app.model.exceptions.InvalidCommandException;
 
-public class App {
+public class PhotoAlbumMain {
 
   public static void main(String[] args)
           throws
